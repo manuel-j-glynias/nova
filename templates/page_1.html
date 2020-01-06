@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>
+        {% if title %}
+            {{title}}
+        {% else %}
+            OmniSeq
+        {% endif %}
+    </title>
+
+     <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+<img src="{{ STATIC_PREFIX }}IntegratedOncology.jpg" width="150" />
+
+<img class="Omniseq_logo" src="{{ STATIC_PREFIX }}omniseqCdx_logo.png" />
+
+<div class="Header_Wrapper">
+    <div>PATIENT</div>
+     <div >SPECIMEN</div>
+    <div >CLIENT</div>
+</div>
+
+<div class="Table">
+    <div class="Row">
+        <div class="Cell">
+            <div><strong>Name:&nbsp;</strong>{{ patient['name'] }}</div>
+            <div><strong>DOB:&nbsp;</strong>{{ patient['DOB']}}&nbsp;&nbsp;&nbsp;<strong>Sex:&nbsp;</strong>{{
+            patient['sex']
+                    }}</div>
+            <div><strong>MRN:&nbsp;</strong>987654321<strong>Order ID:&nbsp;</strong>{{ patient['fake_order_id'] }}</div>
+            <div><strong>Report Date:&nbsp;</strong> {{ patient['sign_out_date'] }} </div>
+            <div><strong>Diagnosis:&nbsp;</strong>{{ patient['diagnosis'] }}</div>
+        </div>
+        <div class="Cell">
+            <div><strong>Facility:&nbsp;</strong>Union Hospital</div>
+            <div><strong>ID:&nbsp;</strong>UHH-19-005523 B1 (AGX19-009562)</div>
+            <div><strong>Source:&nbsp;</strong> {{ patient['source']}}</div>
+            <div><strong>Procured:&nbsp;</strong>04/13/2019</div>
+            <div><strong>Collected:&nbsp;</strong>04/13/2019 10:39 AM ET</div>
+            <div><strong>Received:&nbsp;</strong>04/23/2019 10:39 AM ET</div>
+        </div>
+        <div class="Cell">
+            <div><strong>Provider:&nbsp;</strong> {{ patient['provider'] }}&nbsp;MD</div>
+            <div><strong>NPI:&nbsp;</strong>678901234</div>
+            <div>&nbsp;</div>
+            <div><strong>Ordering Facility:&nbsp;</strong>Integrated Oncology Phoenix</div>
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</div>
+
+<div class="Vertical_Spacer_10"></div>
+
+<div class="Section_Header">SUMMARY</div>
+<div class="Pathologists_Comments">
+    {{ patient['pathologist_comments'] }}
+</div>
+
+<div class="Vertical_Spacer_10"></div>
+<div class="Section_Header">PRIORITY MARKER RESULTS AND THERAPY CONSIDERATIONS FOR THE TESTED SPECIMEN</div>
+<div class="Section_Subhead">{{ patient['OmniDisease'] }}</div>
+
+<div class="Markers_Wrapper">
+    <div>Companion Diagnostic (CDx) Genomic Markers</div>
+    <div>
+        {% if patient['cdx_genomic_markers']|length > 0 %}
+            {{ patient['cdx_genomic_markers']|join(", ") }}
+        {%  else %}
+            None
+    {% endif %}
+    </div>
+    <div>Actionable Genomic Markers</div>
+    <div>
+        {% if patient['actionable_genomic_markers']|length > 0 %}
+            {{ patient['actionable_genomic_markers']|join(", ") }}
+        {%  else %}
+            None
+    {% endif %}</div>
+    <div>Pertinent Negatives: <br/><span class="Markers_Wrapper_Span">(Genomic markers tested but not detected)</span></div>
+    <div  class="Pertinent_Negatives">
+        {% if patient['pertinent_negatives']|length > 0 %}
+            {{ patient['pertinent_negatives']|join(", ") }}
+        {%  else %}
+            None
+    {% endif %}
+    </div>
+    <div>PD-L1 (IHC 22C3) (CDx)</div>
+    <div>{{ patient['PD-L1 IHC']}}% Tumor Proportion Score (TPS)</div>
+    <div>Tumor Mutational Burden (TMB)</div>
+    <div>{{ patient['TMB Result']|float|round(2, 'floor')}} Mut/Mb</div>
+    <div>Microsatellite Instability (MSI)</div>
+    <div>{{ patient['MSI'] }}</div>
+
+</div>
+
+<div class="Vertical_Spacer_10"></div>
+
+<div class="Therapies_Header_Wrapper">
+    <div>Positive Markers</div>
+    <div>Therapies</div>
+    <div>Setting</div>
+    <div>Evidence</div>
+</div>
+
+
+<div class="Therapies_Wrapper">
+    {% for therapy_by_marker in patient['therapies_by_marker'] %}
+        <div class="Therapy_Marker"><div class="Therapy_Marker_Text">{{therapy_by_marker['marker']}}</div></div>
+        <div class="Nested_Therapies_Wrapper">
+            {% for therapy in therapy_by_marker['therapies'] %}
+                <div>{{therapy['therapy']}}</div>
+                <div>{{therapy['setting']}}</div>
+                <div>{{therapy['evidence']}}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+<div class="Vertical_Spacer_10"></div>
+<div class="Cap_Asco_Blurb">
+Priority tumor profiling results include markers associated with therapies with AMP/CAP/ASCO Level IA (on-label or included in professional guidelines) or IB (well-powered studies with consensus in the field). See Therapy Details for more information and additional treatment considerations, including clinical trials.
+</div>
+
+
+
+
+<div class="Footer">
+     {{patient['test_id']}}&nbsp;P-20-00000-000 VERSION 1 | Report electronically signed by George Who, MD
+    |{{patient['sign_out_date']}} <br>
+    CLIA ID: 33D2098748 | CAP # 9405346 | OmniSeq Inc., 700 Ellicott Street, Buffalo NY 14203 | 1 (800) 781-1259
+<img class="Cap_logo" src="{{ STATIC_PREFIX }}cap_logo.png" width="75" />
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+This {{ get_age_from_birthdate(patient) }} year old {% if patient['sex']=='Male' %}man{% else %}woman{% endif %}
+ with {{patient['ckb_disease']}} has
+{% if patient['cdx_genomic_markers']|length == 0 %} no FDA CDx variants
+{% else %}
+    {% if patient['cdx_genomic_markers']|length == 1 %}one variant ({{patient['cdx_genomic_markers'][0]}})
+    {% else %}
+        {{patient['cdx_genomic_markers']|length}} variants {% endif %}with an FDA CDx label
+{% endif %}
+{% if patient['cdx_io']|length > 0 %}
+ and  {% if patient['cdx_io']|length == 1 %}one io marker ({{patient['cdx_io'][0]}}).
+    {% else %} {{ patient['cdx_io']|length }} io markers.{% endif %}
+{% else %}
+.&nbsp;&nbsp;
+{% endif %}
+{% if patient['actionable_genomic_markers']|length > 0 %}
+    {% if patient['cdx_genomic_markers']|length == 0 %}However, there
+        {% else %}In addition, there {% endif %}
+    {% if patient['actionable_genomic_markers']|length == 1 %}is one potentially actionable variant ({{patient['actionable_genomic_markers'][0]}}).
+    {% else %}are {{ patient['actionable_genomic_markers']|length }} potentially actionable variants ({{patient['actionable_genomic_markers']|join
+    (", ")}}).
+    {% endif %}
+{% endif %}
+&nbsp;&nbsp;
+The PD-L1 is {{patient['PD-L1 Interpretation']}} at {{patient['PD-L1 IHC']}}% TPS, the TMB is
+ {{patient['TMB Interpretation']|lower}} at {{ patient['TMB Result']|float|round(2, 'floor')}} Mut/Mb, and MSI is {{
+patient['MSI']|lower }}.
+
+<!--{% if num_strongly_recommended(patient) > 0 %}  {{ get_class_and_drug_phrase(patient,'strongly_recommended',0) }}-->
+<!--    {% if num_strongly_recommended(patient) > 1 %} or {{ get_class_and_drug_phrase(patient,'strongly_recommended',1) }}-->
+<!--{% endif %} is strongly recommended for this patient.-->
+<!--{% endif %}-->
+<!--{% if any_caution(patient) %} {{ get_catution(patient) }}-->
+<!--{% endif %}-->

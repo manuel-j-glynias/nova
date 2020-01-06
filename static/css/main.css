@@ -1,0 +1,656 @@
+
+@media print {
+    html, body {
+        height: 100%;
+    }
+}
+.Header_Wrapper {
+    display: grid;
+    width: 760px;
+    height: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.Table {
+    display: table;
+    width: 760px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+}
+
+
+.Row {
+    display: table-row;
+}
+
+.Cell {
+    display: table-cell;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 269px;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
+
+.Section_Header {
+    background-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 20px;
+    padding-top: 5px;
+}
+.Section_Subhead {
+    background-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 12px;
+    padding-bottom: 5px;
+}
+
+.Pathologists_Comments {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    width: 750px;
+    height: 120px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+}
+
+.Vertical_Spacer_10 {
+    height: 10px;
+}
+.Vertical_Spacer_12 {
+    height: 12px;
+}
+.Vertical_Spacer_50 {
+    height: 50px;
+}
+
+.Markers_Wrapper {
+    display: grid;
+    grid-template-columns: 280px 480px;
+    grid-row-gap: 3px;
+    align-items: center;
+
+}
+.Markers_Wrapper > div{
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    height: 30px;
+}
+
+.Markers_Wrapper_Span {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
+.Markers_Wrapper > div:nth-child(odd){
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+}
+
+.Markers_Wrapper > div:nth-child(even){
+    padding-left: 5px;
+    padding-top: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    height: 31px;
+}
+.Pertinent_Negatives {
+    font-style: italic;
+}
+.Test_Description {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    width: 750px;
+    height: 90px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+}
+.Therapies_Header_Wrapper {
+    display: grid;
+    width: 760px;
+    height: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+}
+.Therapies_Wrapper {
+    display: grid;
+    width: 760px;
+    grid-template-columns: 170px 590px;
+}
+.Therapy_Marker {
+    position: relative;
+}
+
+.Therapy_Marker_Text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 5px;
+}
+.Therapies_Wrapper > div{
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+}
+.Nested_Therapies_Wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(30px,auto);
+    height: auto;
+
+}
+.Nested_Therapies_Wrapper > div{
+    padding-left: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+
+}
+
+.Cap_Asco_Blurb {
+    background-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 45px;
+    padding-bottom: 5px;
+}
+.Footer {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    width: 750px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.Additional_Results_Wrapper {
+    display: grid;
+    width: 760px;
+    grid-template-columns: 160px 600px;
+    grid-row-gap: 10px;
+}
+.Additional_Results_Wrapper > div:nth-child(odd){
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+    /*height: 33px;*/
+}
+.Additional_Results_Wrapper > div:nth-child(even){
+    padding-left: 5px;
+    padding-top: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    /*height: 31px;*/
+}
+.Additional_Results_Wrapper_Span {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Neoantigen {
+    display: grid;
+    width: 760px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.Nested_Neoantigen_Left{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(18px, auto);
+ }
+.Nested_Neoantigen_Left > div {
+    background-color: #2A508F;
+    color: white;
+    font-size: 11px;
+    padding-left: 5px;
+}
+.Nested_Neoantigen_Left > div:first-child {
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.Nested_Neoantigen{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(18px, auto);
+ }
+.Nested_Neoantigen > div {
+    background-color: white;
+    color:  black;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    font-size: 13px;
+    padding-left: 5px;
+}
+.Nested_Neoantigen > div:first-child {
+    border-top-style: solid;
+    background-color: lightgray;
+}
+.Immuno_Oncology {
+    display: grid;
+    width: 760px;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+.Immuno_Oncology > div {
+    background-color: #2A508F;
+    color: white;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.Immuno_Oncology_Small_Text {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    display: inline-block;
+    line-height: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.Nested_Immuno_Oncology {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(18px, auto);
+ }
+.Nested_Immuno_Oncology > div {
+    background-color: white;
+    color:  black;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    font-size: 13px;
+    padding-left: 5px;
+}
+.Nested_Immuno_Oncology .High {
+    background-color: green;
+    color:  white;
+    font-weight: bold;
+    border-color: black;
+}
+.Nested_Immuno_Oncology .Low {
+    background-color: red;
+    color:  white;
+    font-weight: bold;
+    border-color: black;
+}
+.Nested_Immuno_Oncology > div:first-child {
+    background-color: lightgray;
+}
+.Nested_Immuno_Oncology > div:nth-child(2) {
+    background-color: lightgray;
+}
+.Nested_Immuno_Oncology > div:nth-child(even) {
+    text-align: center;
+}
+
+.Immunology_Subhead {
+    background-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 12px;
+    padding-bottom: 5px;
+}
+
+.Cap_logo {
+  position: absolute;
+  width: 75px;
+  left: 690px;
+
+  }
+.Omniseq_logo {
+      position: absolute;
+      width: 250px;
+      left: 510px;
+
+      }
+/*Page 3*/
+
+.Details_Wrapper {
+    display: grid;
+    grid-template-columns: 280px 480px;
+    grid-row-gap: 3px;
+    align-items: center;
+
+}
+.Details_Wrapper > div{
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    height: auto;
+}
+
+.Details_Wrapper {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
+.Details_Wrapper > div:nth-child(odd){
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+}
+
+.Details_Wrapper > div:nth-child(even){
+    padding-left: 5px;
+    padding-top: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    height: auto;
+}
+.Details_Wrapper_Text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 5px;
+    color: white;
+}
+.Strong_Header {
+    background-color: green;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 20px;
+    padding-top: 5px;
+}
+.Moderate_Header {
+    background-color: orange;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 20px;
+    padding-top: 5px;
+}
+.Emerging_Header {
+    background-color: darkviolet;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    width: 760px;
+    height: 20px;
+    padding-top: 5px;
+}
+.Therapy_Details_Wrapper {
+    display: grid;
+    grid-template-columns: 100px 330px 330px;
+    /*grid-row-gap: 3px;*/
+    grid-auto-rows: minmax(30px,auto);
+}
+.Therapy_Details_Wrapper > div{
+    padding-left: 5px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+}
+
+/* page 5 */
+
+.Review_Summary_Wrapper {
+    display: grid;
+    width: 760px;
+    grid-template-columns: 2fr 2fr 2fr 1fr 1fr 1fr;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+}
+.Review_Summary_Wrapper > div{
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-width: thin;
+}
+.Review_Summary_Wrapper > div:nth-child(odd){
+     background-color: lightgray;
+    color: black;
+}
+.Received_Sample_Header_Wrapper {
+    display: grid;
+    width: 760px;
+    height: 20px;
+    grid-template-columns: 1fr 3fr 2fr 1fr 1fr 2fr;
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    border-bottom-style: solid;
+    padding-top: 5px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    font-size: 11px;
+}
+.Received_Sample_Wrapper {
+    display: grid;
+    width: 760px;
+    grid-template-columns: 1fr 3fr 2fr 1fr 1fr 2fr;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+}
+.Received_Sample_Wrapper > div{
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.PD_L1_Immunohistochemistry  {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    width: 750px;
+    /*height: 120px;*/
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* page 6 */
+.About_Wrapper {
+    display: grid;
+    grid-template-columns: 100px 660px;
+    /*align-items: center;*/
+    grid-auto-rows: minmax(30px,auto);
+}
+.About_Wrapper > div{
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+/*.About_Wrapper > div:nth-child(even){*/
+/*    height: 100%;*/
+/*}*/
+.About_Wrapper > div:nth-child(odd){
+    padding-left: 5px;
+    padding-top: 25px;
+    font-size: 13px;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+}
+
+
+.CDX_Indications_Header_Wrapper {
+    display: grid;
+    width: 760px;
+    height: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+}
+.CDX_Indications_Wrapper {
+    display: grid;
+    width: 760px;
+    grid-template-columns: 170px 590px;
+}
+.CDX_Indication {
+    position: relative;
+}
+
+.CDX_Indication_Text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 5px;
+}
+.CDX_Indications_Wrapper > div{
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+}
+.Nested_CDX_Indications_Wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(30px,auto);
+    height: auto;
+
+}
+.Nested_CDX_Indications_Wrapper > div{
+    padding-left: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+
+}
+
+
+/* page 7*/
+.Markers_Tested_Wrapper {
+    width: 760px;
+
+ }
+.Markers_Tested_Wrapper > div{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    height: auto;
+    text-align: center;
+}
+.Markers_Tested_Wrapper > div:nth-child(odd){
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    height: 100%;
+}
