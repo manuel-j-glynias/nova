@@ -5,7 +5,7 @@ import os
 
 
 def render_all_pages(patient,dir_path):
-    pages = ['page_1.html','page_2.html','page_3.html','page_5.html','page_5.html','page_6.html','page_7.html']
+    pages = ['page_1.html','page_2.html','page_3.html','page_4.html','page_5.html','page_6.html','page_7.html']
     wd = os.getcwd()
     static = wd + '/static/'
     for page in pages:

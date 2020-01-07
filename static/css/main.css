@@ -330,13 +330,13 @@
     padding-left: 5px;
 }
 .Nested_Immuno_Oncology .High {
-    background-color: green;
+    background-color: darkviolet;
     color:  white;
     font-weight: bold;
     border-color: black;
 }
 .Nested_Immuno_Oncology .Low {
-    background-color: red;
+    background-color: darkviolet;
     color:  white;
     font-weight: bold;
     border-color: black;
@@ -391,10 +391,6 @@
     height: auto;
 }
 
-.Details_Wrapper {
-    font-family: 'Lato', sans-serif;
-    font-size: 10px;
-}
 .Details_Wrapper > div:nth-child(odd){
     padding-left: 5px;
     padding-top: 5px;
@@ -457,7 +453,6 @@
 .Therapy_Details_Wrapper {
     display: grid;
     grid-template-columns: 100px 330px 330px;
-    /*grid-row-gap: 3px;*/
     grid-auto-rows: minmax(30px,auto);
 }
 .Therapy_Details_Wrapper > div{
@@ -470,7 +465,52 @@
     font-family: 'Lato', sans-serif;
     font-size: 13px;
 }
+/* page 4 */
 
+
+.Additional_Immuno_Oncology_Wrapper {
+    display: grid;
+    width: 760px;
+    grid-template-columns: 160px 600px;
+    grid-row-gap: 10px;
+}
+.Additional_Immuno_Oncology_Wrapper > div:nth-child(odd){
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #2A508F;
+    color: white;
+    font-weight: bold;
+}
+.Additional_Immuno_Oncology_Wrapper > div:nth-child(even){
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    border-color: #2A508F;
+    /*height: 31px;*/
+}
+.Additional_Immuno_Oncology_Wrapper_Span {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.IO_Marker {
+    position: relative;
+}
+
+.IO_Marker_Text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 5px;
+    text-align: center;
+}
 /* page 5 */
 
 .Review_Summary_Wrapper {

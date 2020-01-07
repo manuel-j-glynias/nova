@@ -7,7 +7,7 @@ from pymongo.errors import ConnectionFailure
 
 def get_mongo_client():
     client = pymongo.MongoClient(
-        "mongodb+srv://mglynias:VICEy5i3in4G3TJZ@omniseq-unjsy.gcp.mongodb.net/test?retryWrites=true&w=majority"
+        "mongodb+srv://omni_user:700Ellicott@omniseq-unjsy.gcp.mongodb.net/test?retryWrites=true&w=majority"
     )
 
     try:

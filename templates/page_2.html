@@ -2,13 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <title>
-        {% if title %}
-            {{title}}
-        {% else %}
-            OmniSeq
-        {% endif %}
-    </title>
+    <title>OmniSeq Page 2</title>
+
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
      <link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}css/main.css">
@@ -81,182 +76,116 @@
         <div>Marker</div>
         <div>Rank</div>
 
-        <div    {% if io['CD137']|int >= 75 %} class="High"
-                {% elif io['CD137']|int < 25 %} class="Low"
-                {% endif %} >CD137</div>
-        <div {% if io['CD137']|int >= 75 %} class="High"
-                 {% elif io['CD137']|int < 25 %} class="Low"
-                {% endif %} >{{ io['CD137'] }}</div>
+        <div {% if io['CD137']|int >= 75 %} class="High" {% endif %} >CD137</div>
+        <div {% if io['CD137']|int >= 75 %} class="High" {% endif %} >{{ io['CD137'] }}</div>
 
-        <div {% if io['CD27']|int >= 75 %} class="High"
-                {% elif io['CD27']|int < 25 %} class="Low" {% endif %} >CD27</div>
-        <div {% if io['CD27']|int >= 75 %} class="High"
-                {% elif io['CD27']|int < 25 %} class="Low" {% endif %} >{{ io['CD27'] }}</div>
+        <div {% if io['CD27']|int >= 75 %} class="High" {% endif %} >CD27</div>
+        <div {% if io['CD27']|int >= 75 %} class="High" {% endif %} >{{ io['CD27'] }}</div>
 
-        <div {% if io['CD28']|int >= 75 %} class="High"
-                {% elif io['CD28']|int < 25 %} class="Low" {% endif %} >CD28</div>
-        <div {% if io['CD28']|int >= 75 %} class="High"
-                {% elif io['CD28']|int < 25 %} class="Low" {% endif %} >{{ io['CD28'] }}</div>
+        <div {% if io['CD28']|int >= 75 %} class="High" {% endif %} >CD28</div>
+        <div {% if io['CD28']|int >= 75 %} class="High" {% endif %} >{{ io['CD28'] }}</div>
 
-        <div {% if io['CD40']|int >= 75 %} class="High"
-                {% elif io['CD40']|int < 25 %} class="Low" {% endif %} >CD40</div>
-        <div {% if io['CD40']|int >= 75 %} class="High"
-                {% elif io['CD40']|int < 25 %} class="Low" {% endif %} >{{ io['CD40'] }}</div>
+        <div {% if io['CD40']|int >= 75 %} class="High" {% endif %} >CD40</div>
+        <div {% if io['CD40']|int >= 75 %} class="High" {% endif %} >{{ io['CD40'] }}</div>
 
-        <div {% if io['CD40LG']|int >= 75 %} class="High"
-                {% elif io['CD40LG']|int < 25 %} class="Low" {% endif %} >CD40LG</div>
-        <div {% if io['CD40LG']|int >= 75 %} class="High"
-                {% elif io['CD40LG']|int < 25 %} class="Low" {% endif %} >{{ io['CD40LG'] }}</div>
+        <div {% if io['CD40LG']|int >= 75 %} class="High" {% endif %} >CD40LG</div>
+        <div {% if io['CD40LG']|int >= 75 %} class="High" {% endif %} >{{ io['CD40LG'] }}</div>
 
-        <div {% if io['CD80']|int >= 75 %} class="High"
-                {% elif io['CD80']|int < 25 %} class="Low" {% endif %} >CD80</div>
-        <div {% if io['CD80']|int >= 75 %} class="High"
-                {% elif io['CD80']|int < 25 %} class="Low" {% endif %} >{{ io['CD80'] }}</div>
+        <div {% if io['CD80']|int >= 75 %} class="High" {% endif %} >CD80</div>
+        <div {% if io['CD80']|int >= 75 %} class="High" {% endif %} >{{ io['CD80'] }}</div>
 
-        <div {% if io['CD86']|int >= 75 %} class="High"
-                {% elif io['CD86']|int < 25 %} class="Low" {% endif %} >CD86</div>
-        <div {% if io['CD86']|int >= 75 %} class="High"
-                {% elif io['CD86']|int < 25 %} class="Low" {% endif %} >{{ io['CD86'] }}</div>
+        <div {% if io['CD86']|int >= 75 %} class="High" {% endif %} >CD86</div>
+        <div {% if io['CD86']|int >= 75 %} class="High" {% endif %} >{{ io['CD86'] }}</div>
 
-        <div {% if io['GITR']|int >= 75 %} class="High"
-                {% elif io['GITR']|int < 25 %} class="Low" {% endif %} >GITR</div>
-        <div {% if io['GITR']|int >= 75 %} class="High"
-                {% elif io['GITR']|int < 25 %} class="Low" {% endif %} >{{ io['GITR'] }}</div>
+        <div {% if io['GITR']|int >= 75 %} class="High" {% endif %} >GITR</div>
+        <div {% if io['GITR']|int >= 75 %} class="High" {% endif %} >{{ io['GITR'] }}</div>
 
-        <div {% if io['GZMB']|int >= 75 %} class="High"
-                {% elif io['GZMB']|int < 25 %} class="Low" {% endif %} >GZMB</div>
-        <div {% if io['GZMB']|int >= 75 %} class="High"
-                {% elif io['GZMB']|int < 25 %} class="Low" {% endif %} >{{ io['GZMB'] }}</div>
+        <div {% if io['GZMB']|int >= 75 %} class="High" {% endif %} >GZMB</div>
+        <div {% if io['GZMB']|int >= 75 %} class="High" {% endif %} >{{ io['GZMB'] }}</div>
 
-        <div {% if io['ICOS']|int >= 75 %} class="High"
-                {% elif io['ICOS']|int < 25 %} class="Low" {% endif %} >ICOS</div>
-        <div {% if io['ICOS']|int >= 75 %} class="High"
-                {% elif io['ICOS']|int < 25 %} class="Low" {% endif %} >{{ io['ICOS'] }}</div>
+        <div {% if io['ICOS']|int >= 75 %} class="High" {% endif %} >ICOS</div>
+        <div {% if io['ICOS']|int >= 75 %} class="High" {% endif %} >{{ io['ICOS'] }}</div>
 
-        <div {% if io['ICOSLG']|int >= 75 %} class="High"
-                {% elif io['ICOSLG']|int < 25 %} class="Low" {% endif %} >ICOSLG</div>
-        <div {% if io['ICOSLG']|int >= 75 %} class="High"
-                {% elif io['ICOSLG']|int < 25 %} class="Low" {% endif %} >{{ io['ICOSLG'] }}</div>
+        <div {% if io['ICOSLG']|int >= 75 %} class="High" {% endif %} >ICOSLG</div>
+        <div {% if io['ICOSLG']|int >= 75 %} class="High" {% endif %} >{{ io['ICOSLG'] }}</div>
 
-        <div {% if io['IFNG']|int >= 75 %} class="High"
-                {% elif io['IFNG']|int < 25 %} class="Low" {% endif %} >IFNG</div>
-        <div {% if io['IFNG']|int >= 75 %} class="High"
-                {% elif io['IFNG']|int < 25 %} class="Low" {% endif %} >{{ io['IFNG'] }}</div>
+        <div {% if io['IFNG']|int >= 75 %} class="High" {% endif %} >IFNG</div>
+        <div {% if io['IFNG']|int >= 75 %} class="High" {% endif %} >{{ io['IFNG'] }}</div>
 
-        <div {% if io['OX40']|int >= 75 %} class="High"
-                {% elif io['OX40']|int < 25 %} class="Low" {% endif %} >OX40</div>
-        <div {% if io['OX40']|int >= 75 %} class="High"
-                {% elif io['OX40']|int < 25 %} class="Low" {% endif %} >{{ io['OX40'] }}</div>
+        <div {% if io['OX40']|int >= 75 %} class="High" {% endif %} >OX40</div>
+        <div {% if io['OX40']|int >= 75 %} class="High" {% endif %} >{{ io['OX40'] }}</div>
 
-        <div {% if io['OX-40L']|int >= 75 %} class="High"
-                {% elif io['OX-40L']|int < 25 %} class="Low" {% endif %} >OX-40L</div>
-        <div {% if io['OX-40L']|int >= 75 %} class="High"
-                {% elif io['OX-40L']|int < 25 %} class="Low" {% endif %} >{{ io['OX-40L'] }}</div>
+        <div {% if io['OX-40L']|int >= 75 %} class="High" {% endif %} >OX-40L</div>
+        <div {% if io['OX-40L']|int >= 75 %} class="High" {% endif %} >{{ io['OX-40L'] }}</div>
 
-        <div {% if io['TBX21']|int >= 75 %} class="High"
-                {% elif io['TBX21']|int < 25 %} class="Low" {% endif %} >TBX21</div>
-        <div {% if io['TBX21']|int >= 75 %} class="High"
-                {% elif io['TBX21']|int < 25 %} class="Low" {% endif %} >{{ io['TBX21'] }}</div>
+        <div {% if io['TBX21']|int >= 75 %} class="High" {% endif %} >TBX21</div>
+        <div {% if io['TBX21']|int >= 75 %} class="High" {% endif %} >{{ io['TBX21'] }}</div>
 
    </div>
     <div class="Nested_Immuno_Oncology">
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['CXCL10']|int >= 75 %} class="High"
-                {% elif io['CXCL10']|int < 25 %} class="Low" {% endif %} >CXCL10</div>
-        <div {% if io['CXCL10']|int >= 75 %} class="High"
-                {% elif io['CXCL10']|int < 25 %} class="Low" {% endif %} >{{ io['CXCL10'] }}</div>
+        <div {% if io['CXCL10']|int >= 75 %} class="High" {% endif %} >CXCL10</div>
+        <div {% if io['CXCL10']|int >= 75 %} class="High" {% endif %} >{{ io['CXCL10'] }}</div>
 
-        <div {% if io['CXCR6']|int >= 75 %} class="High"
-                {% elif io['CXCR6']|int < 25 %} class="Low" {% endif %} >CXCR6</div>
-        <div {% if io['CXCR6']|int >= 75 %} class="High"
-                {% elif io['CXCR6']|int < 25 %} class="Low" {% endif %} >{{ io['CXCR6'] }}</div>
+        <div {% if io['CXCR6']|int >= 75 %} class="High" {% endif %} >CXCR6</div>
+        <div {% if io['CXCR6']|int >= 75 %} class="High" {% endif %} >{{ io['CXCR6'] }}</div>
 
-        <div {% if io['DDX58']|int >= 75 %} class="High"
-                {% elif io['DDX58']|int < 25 %} class="Low" {% endif %} >DDX58</div>
-        <div {% if io['DDX58']|int >= 75 %} class="High"
-                {% elif io['DDX58']|int < 25 %} class="Low" {% endif %} >{{ io['DDX58'] }}</div>
+        <div {% if io['DDX58']|int >= 75 %} class="High" {% endif %} >DDX58</div>
+        <div {% if io['DDX58']|int >= 75 %} class="High" {% endif %} >{{ io['DDX58'] }}</div>
 
-        <div {% if io['GATA3']|int >= 75 %} class="High"
-                {% elif io['GATA3']|int < 25 %} class="Low" {% endif %} >GATA3</div>
-        <div {% if io['GATA3']|int >= 75 %} class="High"
-                {% elif io['GATA3']|int < 25 %} class="Low" {% endif %} >{{ io['GATA3'] }}</div>
+        <div {% if io['GATA3']|int >= 75 %} class="High" {% endif %} >GATA3</div>
+        <div {% if io['GATA3']|int >= 75 %} class="High" {% endif %} >{{ io['GATA3'] }}</div>
 
-        <div {% if io['IL10']|int >= 75 %} class="High"
-                {% elif io['IL10']|int < 25 %} class="Low" {% endif %} >IL10</div>
-        <div {% if io['IL10']|int >= 75 %} class="High"
-                {% elif io['IL10']|int < 25 %} class="Low" {% endif %} >{{ io['IL10'] }}</div>
+        <div {% if io['IL10']|int >= 75 %} class="High" {% endif %} >IL10</div>
+        <div {% if io['IL10']|int >= 75 %} class="High" {% endif %} >{{ io['IL10'] }}</div>
 
-        <div {% if io['IL1B']|int >= 75 %} class="High"
-                {% elif io['IL1B']|int < 25 %} class="Low" {% endif %} >IL1B</div>
-        <div {% if io['IL1B']|int >= 75 %} class="High"
-                {% elif io['IL1B']|int < 25 %} class="Low" {% endif %} >{{ io['IL1B'] }}</div>
+        <div {% if io['IL1B']|int >= 75 %} class="High" {% endif %} >IL1B</div>
+        <div {% if io['IL1B']|int >= 75 %} class="High" {% endif %} >{{ io['IL1B'] }}</div>
 
-        <div {% if io['MX1']|int >= 75 %} class="High"
-                {% elif io['MX1']|int < 25 %} class="Low" {% endif %} >MX1</div>
-        <div {% if io['MX1']|int >= 75 %} class="High"
-                {% elif io['MX1']|int < 25 %} class="Low" {% endif %} >{{ io['MX1'] }}</div>
+        <div {% if io['MX1']|int >= 75 %} class="High" {% endif %} >MX1</div>
+        <div {% if io['MX1']|int >= 75 %} class="High" {% endif %} >{{ io['MX1'] }}</div>
 
-        <div {% if io['STAT1']|int >= 75 %} class="High"
-                {% elif io['STAT1']|int < 25 %} class="Low" {% endif %} >STAT1</div>
-        <div {% if io['STAT1']|int >= 75 %} class="High"
-                {% elif io['STAT1']|int < 25 %} class="Low" {% endif %} >{{ io['STAT1'] }}</div>
+        <div {% if io['STAT1']|int >= 75 %} class="High" {% endif %} >STAT1</div>
+        <div {% if io['STAT1']|int >= 75 %} class="High" {% endif %} >{{ io['STAT1'] }}</div>
 
-        <div {% if io['TGFB1']|int >= 75 %} class="High"
-                {% elif io['TGFB1']|int < 25 %} class="Low" {% endif %} >TGFB1</div>
-        <div {% if io['TGFB1']|int >= 75 %} class="High"
-                {% elif io['TGFB1']|int < 25 %} class="Low" {% endif %} >{{ io['TGFB1'] }}</div>
+        <div {% if io['TGFB1']|int >= 75 %} class="High" {% endif %} >TGFB1</div>
+        <div {% if io['TGFB1']|int >= 75 %} class="High" {% endif %} >{{ io['TGFB1'] }}</div>
 
-        <div {% if io['TNF']|int >= 75 %} class="High"
-                {% elif io['TNF']|int < 25 %} class="Low" {% endif %} >TNF</div>
-        <div {% if io['TNF']|int >= 75 %} class="High"
-                {% elif io['TNF']|int < 25 %} class="Low" {% endif %} >{{ io['TNF'] }}</div>
+        <div {% if io['TNF']|int >= 75 %} class="High" {% endif %} >TNF</div>
+        <div {% if io['TNF']|int >= 75 %} class="High" {% endif %} >{{ io['TNF'] }}</div>
     </div>
 
     <div class="Nested_Immuno_Oncology">
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['CD2']|int >= 75 %} class="High"
-                {% elif io['CD2']|int < 25 %} class="Low" {% endif %} >CD2</div>
-        <div {% if io['CD2']|int >= 75 %} class="High"
-                {% elif io['CD2']|int < 25 %} class="Low" {% endif %} >{{ io['CD2'] }}</div>
+        <div {% if io['CD2']|int >= 75 %} class="High" {% endif %} >CD2</div>
+        <div {% if io['CD2']|int >= 75 %} class="High" {% endif %} >{{ io['CD2'] }}</div>
 
-        <div {% if io['CD20']|int >= 75 %} class="High"
-                {% elif io['CD20']|int < 25 %} class="Low" {% endif %} >CD20</div>
-        <div {% if io['CD20']|int >= 75 %} class="High"
-                {% elif io['CD20']|int < 25 %} class="Low" {% endif %} >{{ io['CD20'] }}</div>
+        <div {% if io['CD20']|int >= 75 %} class="High" {% endif %} >CD20</div>
+        <div {% if io['CD20']|int >= 75 %} class="High" {% endif %} >{{ io['CD20'] }}</div>
 
-        <div {% if io['CD3']|int >= 75 %} class="High"
-                {% elif io['CD3']|int < 25 %} class="Low" {% endif %} >CD3</div>
-        <div {% if io['CD3']|int >= 75 %} class="High"
-                {% elif io['CD3']|int < 25 %} class="Low" {% endif %} >{{ io['CD3'] }}</div>
+        <div {% if io['CD3']|int >= 75 %} class="High" {% endif %} >CD3</div>
+        <div {% if io['CD3']|int >= 75 %} class="High" {% endif %} >{{ io['CD3'] }}</div>
 
-        <div {% if io['CD4']|int >= 75 %} class="High"
-                {% elif io['CD4']|int < 25 %} class="Low" {% endif %} >CD4</div>
-        <div {% if io['CD4']|int >= 75 %} class="High"
-                {% elif io['CD4']|int < 25 %} class="Low" {% endif %} >{{ io['CD4'] }}</div>
-
+        <div {% if io['CD4']|int >= 75 %} class="High" {% endif %} >CD4</div>
+        <div {% if io['CD4']|int >= 75 %} class="High" {% endif %} >{{ io['CD4'] }}</div>
+{# CD8 is special #}
         <div {% if io['CD8']|int >= 75 %} class="High"
                 {% elif io['CD8']|int < 25 %} class="Low" {% endif %} >CD8</div>
         <div {% if io['CD8']|int >= 75 %} class="High"
                 {% elif io['CD8']|int < 25 %} class="Low" {% endif %} >{{ io['CD8'] }}</div>
 
-        <div {% if io['FOXP3']|int >= 75 %} class="High"
-                {% elif io['FOXP3']|int < 25 %} class="Low" {% endif %} >FOXP3</div>
-        <div {% if io['FOXP3']|int >= 75 %} class="High"
-                {% elif io['FOXP3']|int < 25 %} class="Low" {% endif %} >{{ io['FOXP3'] }}</div>
+        <div {% if io['FOXP3']|int >= 75 %} class="High" {% endif %} >FOXP3</div>
+        <div {% if io['FOXP3']|int >= 75 %} class="High" {% endif %} >{{ io['FOXP3'] }}</div>
 
-        <div {% if io['KLRD1']|int >= 75 %} class="High"
-                {% elif io['KLRD1']|int < 25 %} class="Low" {% endif %} >KLRD1</div>
-        <div {% if io['KLRD1']|int >= 75 %} class="High"
-                {% elif io['KLRD1']|int < 25 %} class="Low" {% endif %} >{{ io['KLRD1'] }}</div>
+        <div {% if io['KLRD1']|int >= 75 %} class="High" {% endif %} >KLRD1</div>
+        <div {% if io['KLRD1']|int >= 75 %} class="High" {% endif %} >{{ io['KLRD1'] }}</div>
 
-        <div {% if io['SLAMF4']|int >= 75 %} class="High"
-                {% elif io['SLAMF4']|int < 25 %} class="Low" {% endif %} >SLAMF4</div>
-        <div {% if io['SLAMF4']|int >= 75 %} class="High"
-                {% elif io['SLAMF4']|int < 25 %} class="Low" {% endif %} >{{ io['SLAMF4'] }}</div>
+        <div {% if io['SLAMF4']|int >= 75 %} class="High" {% endif %} >SLAMF4</div>
+        <div {% if io['SLAMF4']|int >= 75 %} class="High" {% endif %} >{{ io['SLAMF4'] }}</div>
     </div>
 
 
@@ -264,50 +193,32 @@
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['BTLA']|int >= 75 %} class="High"
-                {% elif io['BTLA']|int < 25 %} class="Low" {% endif %} >BTLA</div>
-        <div {% if io['BTLA']|int >= 75 %} class="High"
-                {% elif io['BTLA']|int < 25 %} class="Low" {% endif %} >{{ io['BTLA'] }}</div>
+        <div {% if io['BTLA']|int >= 75 %} class="High" {% endif %} >BTLA</div>
+        <div {% if io['BTLA']|int >= 75 %} class="High" {% endif %} >{{ io['BTLA'] }}</div>
 
-        <div {% if io['CTLA4']|int >= 75 %} class="High"
-                {% elif io['CTLA4']|int < 25 %} class="Low" {% endif %} >CTLA4</div>
-        <div {% if io['CTLA4']|int >= 75 %} class="High"
-                {% elif io['CTLA4']|int < 25 %} class="Low" {% endif %} >{{ io['CTLA4'] }}</div>
+        <div {% if io['CTLA4']|int >= 75 %} class="High" {% endif %} >CTLA4</div>
+        <div {% if io['CTLA4']|int >= 75 %} class="High" {% endif %} >{{ io['CTLA4'] }}</div>
 
-        <div {% if io['LAG3']|int >= 75 %} class="High"
-                {% elif io['LAG3']|int < 25 %} class="Low" {% endif %} >LAG3</div>
-        <div {% if io['LAG3']|int >= 75 %} class="High"
-                {% elif io['LAG3']|int < 25 %} class="Low" {% endif %} >{{ io['LAG3'] }}</div>
+        <div {% if io['LAG3']|int >= 75 %} class="High" {% endif %} >LAG3</div>
+        <div {% if io['LAG3']|int >= 75 %} class="High" {% endif %} >{{ io['LAG3'] }}</div>
 
-        <div {% if io['PD-1']|int >= 75 %} class="High"
-                {% elif io['PD-1']|int < 25 %} class="Low" {% endif %} >PD-1</div>
-        <div {% if io['PD-1']|int >= 75 %} class="High"
-                {% elif io['PD-1']|int < 25 %} class="Low" {% endif %} >{{ io['PD-1'] }}</div>
+        <div {% if io['PD-1']|int >= 75 %} class="High" {% endif %} >PD-1</div>
+        <div {% if io['PD-1']|int >= 75 %} class="High" {% endif %} >{{ io['PD-1'] }}</div>
 
-        <div {% if io['PD-L1']|int >= 75 %} class="High"
-                {% elif io['PD-L1']|int < 25 %} class="Low" {% endif %} >PD-L1</div>
-        <div {% if io['PD-L1']|int >= 75 %} class="High"
-                {% elif io['PD-L1']|int < 25 %} class="Low" {% endif %} >{{ io['PD-L1'] }}</div>
+        <div {% if io['PD-L1']|int >= 75 %} class="High" {% endif %} >PD-L1</div>
+        <div {% if io['PD-L1']|int >= 75 %} class="High" {% endif %} >{{ io['PD-L1'] }}</div>
 
-        <div {% if io['PD-L2']|int >= 75 %} class="High"
-                {% elif io['PD-L2']|int < 25 %} class="Low" {% endif %} >PD-L2</div>
-        <div {% if io['PD-L2']|int >= 75 %} class="High"
-                {% elif io['PD-L2']|int < 25 %} class="Low" {% endif %} >{{ io['PD-L2'] }}</div>
+        <div {% if io['PD-L2']|int >= 75 %} class="High" {% endif %} >PD-L2</div>
+        <div {% if io['PD-L2']|int >= 75 %} class="High" {% endif %} >{{ io['PD-L2'] }}</div>
 
-        <div {% if io['TIM3']|int >= 75 %} class="High"
-                {% elif io['TIM3']|int < 25 %} class="Low" {% endif %} >TIM3</div>
-        <div {% if io['TIM3']|int >= 75 %} class="High"
-                {% elif io['TIM3']|int < 25 %} class="Low" {% endif %} >{{ io['TIM3'] }}</div>
+        <div {% if io['TIM3']|int >= 75 %} class="High" {% endif %} >TIM3</div>
+        <div {% if io['TIM3']|int >= 75 %} class="High" {% endif %} >{{ io['TIM3'] }}</div>
 
-        <div {% if io['VISTA']|int >= 75 %} class="High"
-                {% elif io['VISTA']|int < 25 %} class="Low" {% endif %} >VISTA</div>
-        <div {% if io['VISTA']|int >= 75 %} class="High"
-                {% elif io['VISTA']|int < 25 %} class="Low" {% endif %} >{{ io['VISTA'] }}</div>
+        <div {% if io['VISTA']|int >= 75 %} class="High" {% endif %} >VISTA</div>
+        <div {% if io['VISTA']|int >= 75 %} class="High" {% endif %} >{{ io['VISTA'] }}</div>
 
-        <div {% if io['TNFRSF14']|int >= 75 %} class="High"
-                {% elif io['TNFRSF14']|int < 25 %} class="Low" {% endif %} >TNFRSF14</div>
-        <div {% if io['TNFRSF14']|int >= 75 %} class="High"
-                {% elif io['TNFRSF14']|int < 25 %} class="Low" {% endif %} >{{ io['TNFRSF14'] }}</div>
+        <div {% if io['TNFRSF14']|int >= 75 %} class="High" {% endif %} >TNFRSF14</div>
+        <div {% if io['TNFRSF14']|int >= 75 %} class="High" {% endif %} >{{ io['TNFRSF14'] }}</div>
     </div>
 
 
@@ -315,50 +226,32 @@
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['ADORA2A']|int >= 75 %} class="High"
-                {% elif io['ADORA2A']|int < 25 %} class="Low" {% endif %} >ADORA2A</div>
-        <div {% if io['ADORA2A']|int >= 75 %} class="High"
-                {% elif io['ADORA2A']|int < 25 %} class="Low" {% endif %} >{{ io['ADORA2A'] }}</div>
+        <div {% if io['ADORA2A']|int >= 75 %} class="High" {% endif %} >ADORA2A</div>
+        <div {% if io['ADORA2A']|int >= 75 %} class="High" {% endif %} >{{ io['ADORA2A'] }}</div>
 
-        <div {% if io['CCL2']|int >= 75 %} class="High"
-                {% elif io['CCL2']|int < 25 %} class="Low" {% endif %} >CCL2</div>
-        <div {% if io['CCL2']|int >= 75 %} class="High"
-                {% elif io['CCL2']|int < 25 %} class="Low" {% endif %} >{{ io['CCL2'] }}</div>
+        <div {% if io['CCL2']|int >= 75 %} class="High" {% endif %} >CCL2</div>
+        <div {% if io['CCL2']|int >= 75 %} class="High" {% endif %} >{{ io['CCL2'] }}</div>
 
-        <div {% if io['CCR2']|int >= 75 %} class="High"
-                {% elif io['CCR2']|int < 25 %} class="Low" {% endif %} >CCR2</div>
-        <div {% if io['CCR2']|int >= 75 %} class="High"
-                {% elif io['CCR2']|int < 25 %} class="Low" {% endif %} >{{ io['CCR2'] }}</div>
+        <div {% if io['CCR2']|int >= 75 %} class="High" {% endif %} >CCR2</div>
+        <div {% if io['CCR2']|int >= 75 %} class="High" {% endif %} >{{ io['CCR2'] }}</div>
 
-        <div {% if io['CD163']|int >= 75 %} class="High"
-                {% elif io['CD163']|int < 25 %} class="Low" {% endif %} >CD163</div>
-        <div {% if io['CD163']|int >= 75 %} class="High"
-                {% elif io['CD163']|int < 25 %} class="Low" {% endif %} >{{ io['CD163'] }}</div>
+        <div {% if io['CD163']|int >= 75 %} class="High" {% endif %} >CD163</div>
+        <div {% if io['CD163']|int >= 75 %} class="High" {% endif %} >{{ io['CD163'] }}</div>
 
-        <div {% if io['CD38']|int >= 75 %} class="High"
-                {% elif io['CD38']|int < 25 %} class="Low" {% endif %} >CD38</div>
-        <div {% if io['CD38']|int >= 75 %} class="High"
-                {% elif io['CD38']|int < 25 %} class="Low" {% endif %} >{{ io['CD38'] }}</div>
+        <div {% if io['CD38']|int >= 75 %} class="High" {% endif %} >CD38</div>
+        <div {% if io['CD38']|int >= 75 %} class="High" {% endif %} >{{ io['CD38'] }}</div>
 
-        <div {% if io['CD39']|int >= 75 %} class="High"
-                {% elif io['CD39']|int < 25 %} class="Low" {% endif %} >CD39</div>
-        <div {% if io['CD39']|int >= 75 %} class="High"
-                {% elif io['CD39']|int < 25 %} class="Low" {% endif %} >{{ io['CD39'] }}</div>
+        <div {% if io['CD39']|int >= 75 %} class="High" {% endif %} >CD39</div>
+        <div {% if io['CD39']|int >= 75 %} class="High" {% endif %} >{{ io['CD39'] }}</div>
 
-        <div {% if io['CD68']|int >= 75 %} class="High"
-                {% elif io['CD68']|int < 25 %} class="Low" {% endif %} >CD68</div>
-        <div {% if io['CD68']|int >= 75 %} class="High"
-                {% elif io['CD68']|int < 25 %} class="Low" {% endif %} >{{ io['CD68'] }}</div>
+        <div {% if io['CD68']|int >= 75 %} class="High" {% endif %} >CD68</div>
+        <div {% if io['CD68']|int >= 75 %} class="High" {% endif %} >{{ io['CD68'] }}</div>
 
-        <div {% if io['CSF1R']|int >= 75 %} class="High"
-                {% elif io['CSF1R']|int < 25 %} class="Low" {% endif %} >CSF1R</div>
-        <div {% if io['CSF1R']|int >= 75 %} class="High"
-                {% elif io['CSF1R']|int < 25 %} class="Low" {% endif %} >{{ io['CSF1R'] }}</div>
+        <div {% if io['CSF1R']|int >= 75 %} class="High" {% endif %} >CSF1R</div>
+        <div {% if io['CSF1R']|int >= 75 %} class="High" {% endif %} >{{ io['CSF1R'] }}</div>
 
-        <div {% if io['IDO1']|int >= 75 %} class="High"
-                {% elif io['IDO1']|int < 25 %} class="Low" {% endif %} >IDO1</div>
-        <div {% if io['IDO1']|int >= 75 %} class="High"
-                {% elif io['IDO1']|int < 25 %} class="Low" {% endif %} >{{ io['IDO1'] }}</div>
+        <div {% if io['IDO1']|int >= 75 %} class="High" {% endif %} >IDO1</div>
+        <div {% if io['IDO1']|int >= 75 %} class="High" {% endif %} >{{ io['IDO1'] }}</div>
    </div>
 </div>
 

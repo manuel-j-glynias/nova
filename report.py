@@ -9,7 +9,7 @@ import os
 import shutil
 import negatives
 import pathologist_comments
-
+import additional_io
 
 
 
@@ -175,6 +175,7 @@ def handle_one_patient(patient, db, strands):
     evidence.find_therapies(patient, db['evidence'])
     front_page_data(patient, db['evidence'])
     third_page_data(patient)
+    additional_io.add_additional_io(patient)
     # pprint.pprint(patient)
 
 def create_one_report(patient):
@@ -183,8 +184,8 @@ def create_one_report(patient):
 
 
 def create_recommendations(patient, db):
-    # evidence.add_pathologists_comments(patient)
     patient['pathologist_comments'] = pathologist_comments.get_draft_comments(patient)
+
 
 def empty_output_dir():
     for root, dirs, files in os.walk('output'):
@@ -208,7 +209,7 @@ def main():
         handle_one_patient(patient, db, strands)
         create_recommendations(patient,db)
         create_one_report(patient)
-        break
+        # break
         
 
 
