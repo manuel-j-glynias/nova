@@ -9,7 +9,7 @@ def read_fusion(row):
     variant['gene'] = row['HGNC_Symbol']
     variant['Variant'] = row['Variant']
     variant['pdot'] = 'rearrange'
-
+    return variant
 
 def read_cnv_variant(row):
     variant = {}
@@ -157,7 +157,11 @@ def get_pdl1_cutoff_for_disease(patient):
 
 
 def add_io_data(patient):
-    pd_l1_result = int(patient['PD-L1 IHC'])
+    ihc_ = patient['PD-L1 IHC']
+    if ihc_ == '<1':
+        pd_l1_result = 0
+    else:
+        pd_l1_result = int(ihc_)
 
     variant = get_io_base_variant(patient)
     variant['gene'] = 'PD-L1'

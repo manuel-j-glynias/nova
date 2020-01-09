@@ -177,7 +177,7 @@ def handle_one_patient(patient, db, strands):
         annotated_variant = annotate.annotate_cnv(variant, db)
         reportable_variants.is_cnv_reportable(annotated_variant)
         patient['cnv'].append(annotated_variant)
-    for variants in patient['unannotated_fusion']:
+    for variant in patient['unannotated_fusion']:
         annotated_variant = annotate.annotate_cnv(variant, db)
         reportable_variants.is_fusion_reportable(annotated_variant)
         patient['fusion'].append(annotated_variant)
@@ -213,14 +213,15 @@ def main():
     patients = read_variants.read_immune_results_file(get_immune_results_file_path())
     read_variants.read_all_variants(patients, get_variant_file_path())
     strands = annotate.read_strands('data/strands.xlsx')
-
+    num = 1
     for order_id in patients.keys():
         patient = patients[order_id]
         read_variants.add_patient_data(patient)
-        print(patient['fake_order_id'], '=',order_id,'(',patient['OmniDisease'],')')
+        print(num, patient['fake_order_id'], '=',order_id,':',patient['OmniDisease'])
         handle_one_patient(patient, db, strands)
         create_recommendations(patient,db)
         create_one_report(patient)
+        num += 1
         # break
         
 

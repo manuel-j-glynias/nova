@@ -182,80 +182,80 @@ def is_better(appris, best_appris):
     best_val = int(best_appris[1:])
     return appris_val < best_val
 
-# def annotate_one(variant,db):
-#     protein_altering_variants = ['transcript_ablation', 'splice_acceptor_variant', 'splice_donor_variant',
-#                                  'stop_gained', 'frameshift_variant', 'stop_lost', 'start_lost',
-#                                  'transcript_amplification',
-#                                  'inframe_insertion', 'inframe_deletion', 'missense_variant',
-#                                  'protein_altering_variant']
-#     truncating_variants = ['transcript_ablation', 'splice_acceptor_variant', 'splice_donor_variant', 'stop_gained',
-#                            'frameshift_variant', 'start_lost']
-#     response_dict = {'status': 'unspecified parameters'}
-#
-#     server = "https://rest.ensembl.org/vep/human/region/"
-#     ext = str(variant['chrom']) + ':' + str(variant['pos_hg38']) + '/' + variant['alt_hg38'] + '?appris=1&'
-#     # print(server + ext)
-#     r = requests.get(server + ext, headers={"Content-Type": "application/json"})
-#     # if variant['chrom']=='17':
-#     #     print('17')
-#     if not r.ok:
-#         #         r.raise_for_status()
-#         print(r.text)
-#         response_dict['status'] = 'server error'
-#     else:
-#         decoded = r.json()
-#         best_appris = 'R9'
-#         if 'transcript_consequences' in decoded[0]:
-#             for consequence in decoded[0]['transcript_consequences']:
-#                 if 'protein_start' in consequence and 'appris' in consequence and consequence['appris'].startswith(\
-#                         'P'):
-#                     if is_better(consequence['appris'], best_appris):
-#                         best_appris = consequence['appris']
-#                         variant['gene'] = consequence['gene_symbol']
-#                         add_ckb_gene_info(variant,db)
-#                         # add_uniprot_info(variant)
-#                         mutation_type = consequence['consequence_terms'][0]
-#                         if 'cds_start' in consequence:
-#                             allele_string = str(decoded[0]['allele_string'])
-#                             if '-' in allele_string:
-#                                 allele_string = 'del'
-#                             else:
-#                                 allele_string = allele_string.replace('/','>')
-#                             variant['cdot'] = str(consequence['cds_start']) + allele_string
-#                         if 'protein_start' in consequence:
-#                             protein_start = consequence['protein_start']
-#                             variant['protein_start'] = protein_start
-#                             # add_region_hit(variant)
-#                             # add_hot_spot_info(variant)
-#
-#                             if 'amino_acids' in consequence:
-#                                 amino_acids = consequence['amino_acids']
-#                                 aa = amino_acids.split('/')
-#                                 variant['pdot'] = aa[0] + str(protein_start) + aa[1]
-#                             else:
-#                                 variant['pdot'] = str(protein_start) + 'del'
-#                             add_ckb_variant_info(variant,db)
-#                             variant['full_name'] = variant['gene'] + ' ' + variant['pdot']
-#                         else:
-#                             print('crap')
-#                         variant['mutation_type'] = mutation_type
-#                         variant['is_protein_altering'] = mutation_type in protein_altering_variants
-#                         variant['is_truncating_variants'] = mutation_type in truncating_variants
-#                         if 'polyphen_prediction' in consequence:
-#                             variant['polyphen_prediction'] = consequence['polyphen_prediction']
-#                         if 'sift_prediction' in consequence:
-#                             variant['sift_prediction'] = consequence['sift_prediction']
-#                         variant['predicted_deleterious'] = False
-#                         if 'polyphen_prediction' in variant and 'sift_prediction' in variant:
-#                             if 'damaging' in variant['polyphen_prediction'] and 'deleterious' in variant[
-#                                 'sift_prediction']:
-#                                 variant['predicted_deleterious'] = True
-#
-#                         response_dict['status'] = 'success'
-#                         response_dict['variant'] = variant
-#     return response_dict
-
 def annotate_one(variant,db):
+    protein_altering_variants = ['transcript_ablation', 'splice_acceptor_variant', 'splice_donor_variant',
+                                 'stop_gained', 'frameshift_variant', 'stop_lost', 'start_lost',
+                                 'transcript_amplification',
+                                 'inframe_insertion', 'inframe_deletion', 'missense_variant',
+                                 'protein_altering_variant']
+    truncating_variants = ['transcript_ablation', 'splice_acceptor_variant', 'splice_donor_variant', 'stop_gained',
+                           'frameshift_variant', 'start_lost']
+    response_dict = {'status': 'unspecified parameters'}
+
+    server = "https://rest.ensembl.org/vep/human/region/"
+    ext = str(variant['chrom']) + ':' + str(variant['pos_hg38']) + '/' + variant['alt_hg38'] + '?appris=1&'
+    # print(server + ext)
+    r = requests.get(server + ext, headers={"Content-Type": "application/json"})
+    # if variant['chrom']=='17':
+    #     print('17')
+    if not r.ok:
+        #         r.raise_for_status()
+        print(r.text)
+        response_dict['status'] = 'server error'
+    else:
+        decoded = r.json()
+        best_appris = 'R9'
+        if 'transcript_consequences' in decoded[0]:
+            for consequence in decoded[0]['transcript_consequences']:
+                if 'protein_start' in consequence and 'appris' in consequence and consequence['appris'].startswith(\
+                        'P'):
+                    if is_better(consequence['appris'], best_appris):
+                        best_appris = consequence['appris']
+                        variant['gene'] = consequence['gene_symbol']
+                        add_ckb_gene_info(variant,db)
+                        # add_uniprot_info(variant)
+                        mutation_type = consequence['consequence_terms'][0]
+                        if 'cds_start' in consequence:
+                            allele_string = str(decoded[0]['allele_string'])
+                            if '-' in allele_string:
+                                allele_string = 'del'
+                            else:
+                                allele_string = allele_string.replace('/','>')
+                            variant['cdot'] = str(consequence['cds_start']) + allele_string
+                        if 'protein_start' in consequence:
+                            protein_start = consequence['protein_start']
+                            variant['protein_start'] = protein_start
+                            # add_region_hit(variant)
+                            # add_hot_spot_info(variant)
+
+                            if 'amino_acids' in consequence:
+                                amino_acids = consequence['amino_acids']
+                                aa = amino_acids.split('/')
+                                variant['pdot'] = aa[0] + str(protein_start) + aa[1]
+                            else:
+                                variant['pdot'] = str(protein_start) + 'del'
+                            add_ckb_variant_info(variant,db)
+                            variant['full_name'] = variant['gene'] + ' ' + variant['pdot']
+                        else:
+                            print('crap')
+                        variant['mutation_type'] = mutation_type
+                        variant['is_protein_altering'] = mutation_type in protein_altering_variants
+                        variant['is_truncating_variants'] = mutation_type in truncating_variants
+                        if 'polyphen_prediction' in consequence:
+                            variant['polyphen_prediction'] = consequence['polyphen_prediction']
+                        if 'sift_prediction' in consequence:
+                            variant['sift_prediction'] = consequence['sift_prediction']
+                        variant['predicted_deleterious'] = False
+                        if 'polyphen_prediction' in variant and 'sift_prediction' in variant:
+                            if 'damaging' in variant['polyphen_prediction'] and 'deleterious' in variant[
+                                'sift_prediction']:
+                                variant['predicted_deleterious'] = True
+
+                        response_dict['status'] = 'success'
+                        response_dict['variant'] = variant
+    return response_dict
+
+def annotate_one_by_pick(variant,db):
     protein_altering_variants = ['transcript_ablation', 'splice_acceptor_variant', 'splice_donor_variant',
                                  'stop_gained', 'frameshift_variant', 'stop_lost', 'start_lost',
                                  'transcript_amplification',
@@ -326,20 +326,26 @@ def annotate_one(variant,db):
 
 
 def call_annotate(variant,db):
-    retry = 5
-    for attempt in range(1,retry):
-        variant['is_protein_altering'] = False
-        variant['predicted_deleterious'] = False
-        response_dict = annotate_one(variant, db)
+    variant['is_protein_altering'] = False
+    variant['predicted_deleterious'] = False
+    response_dict = annotate_one(variant, db)
+    if response_dict['status'] == 'success':
+        variant = response_dict['variant']
+        add_clinvar(variant,db)
+        add_hot_spot_info(variant,db)
+        is_near_LOF_mutation(variant,db)
+
+    else:
+        print('annotate_one failed with response status:',response_dict['status'])
+        response_dict = annotate_one_by_pick(variant, db)
         if response_dict['status'] == 'success':
             variant = response_dict['variant']
             add_clinvar(variant,db)
             add_hot_spot_info(variant,db)
             is_near_LOF_mutation(variant,db)
-            break
         else:
-            print('annotate_one failed with response status:',response_dict['status'])
-            time.sleep(5)
+            print('annotate_one_by_pick failed with response status:', response_dict['status'])
+
 
 
 def get_annotated_snv(variant, db):

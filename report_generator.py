@@ -42,7 +42,7 @@ def render_two_page_html_report(patient):
         data = myfile.read()
         template = Environment(loader=BaseLoader()).from_string(data)
         # template.globals['STATIC_PREFIX'] = '/Users/mglynias/Desktop/PycharmProjects/nova/static/'
-        template.globals['STATIC_PREFIX'] = static
+        # template.globals['STATIC_PREFIX'] = static
         # output.append(template.render(patient=patient))
         with open(path, "w") as file:
             file.write(template.render(patient=patient, reportable_io_markers=reportable_io_markers))
