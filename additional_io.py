@@ -50,6 +50,7 @@ io_recommendations = {
         }
 
 IO_cut_off = 75
+reportable_io_markers = ['CD8','TIM3','CCR2','GITR','VISTA','CSF1R','TNF','CD38','IDO1','TGFB1','CTLA4','LAG3','CD40','ADORA2A','OX40','CD137','CD27','ICOS']
 
 def get_io_description(key):
     value = lorem
@@ -62,6 +63,8 @@ def get_io_recommendation(key):
     if key in io_recommendations:
         value = io_recommendations[key]
     return value
+
+reportable_io_markers = ['CD8','TIM3','CCR2','GITR','VISTA','CSF1R','TNF','CD38','IDO1','TGFB1','CTLA4','LAG3','CD40','ADORA2A','OX40','CD137','CD27','ICOS']
 
 io_markers = ['CD137','CD27','CD28','CD40','CD40LG','CD80','CD86','GITR','GZMB','ICOS','ICOSLG','IFNG','OX40','OX-40L','TBX21',
              'CXCL10','CXCR6','DDX58','GATA3','IL10','IL1B','MX1','STAT1','TGFB1','TNF',
@@ -79,14 +82,15 @@ def make_fake_trial(io):
 def add_additional_io(patient):
     patient['additional_io_details'] = []
     for io in io_markers:
-        if int(patient['io_data'][io]) >= IO_cut_off:
-            detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'High', 'description':get_io_description(io),
-                      'trials': [make_fake_trial(io)]}
-            patient['additional_io_details'].append(detail)
-        elif io=='CD8' and int(patient['io_data']['CD8']) <= 25:
-            detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'Low', 'description':get_io_description(io),
-                      'trials': [make_fake_trial(io)]}
-            patient['additional_io_details'].append(detail)
+        if io in reportable_io_markers and not patient['io_data'][io]=='-':
+            if int(patient['io_data'][io]) >= IO_cut_off:
+                detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'High', 'description':get_io_description(io),
+                          'trials': [make_fake_trial(io)]}
+                patient['additional_io_details'].append(detail)
+            elif io=='CD8' and int(patient['io_data']['CD8']) <= 25:
+                detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'Low', 'description':get_io_description(io),
+                          'trials': [make_fake_trial(io)]}
+                patient['additional_io_details'].append(detail)
 
 
 

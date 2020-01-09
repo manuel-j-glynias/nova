@@ -1,0 +1,323 @@
+OrderID_External,OmniDisease,HGNC_Symbol,Variant,Exon,Codon,Chromosome,Position,Ref,Alt,Quality,VAF,ClinVarSignificance,ClinVarCounts,Sift,Polyphen,COSMIC_Frequency,COSMIC_MutCount,COSMIC_GeneMutCount
+P-19-04023,Ovarian Cancer,BRCA1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04023,Ovarian Cancer,NF1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04023,Ovarian Cancer,PIK3CA,1130C>G (P377R),6,377,3,178922361,C,G,100.0,0.459,Uncertain significance,,Tolerated,Possibly Damaging,,,
+P-19-04023,Ovarian Cancer,PIK3CA,333G>C (K111N),2,111,3,178916946,G,C,2133.99,0.422,Likely pathogenic,,Deleterious,Probably Damaging,0.08%,12,14724
+P-19-04023,Ovarian Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04023,Ovarian Cancer,TP53,451C>A (P151T),5,151,17,7578479,G,T,1074.45,0.319,Likely pathogenic,,Deleterious,Possibly Damaging,0.08%,24,29999
+P-19-04023,Ovarian Cancer,TSC1,1190C>T (P397L),12,397,9,135786031,G,A,100.0,0.653,Uncertain significance,,Tolerated,Probably Damaging,,,
+P-19-04025,Uterine Cancer,TP53,734G>A (G245D),7,245,17,7577547,C,T,100.0,0.346,Pathogenic,,Deleterious,Probably Damaging,0.64%,193,29999
+P-19-04026,Breast Cancer,APC,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04026,Breast Cancer,CDH1,2005C>T (L669F),13,669,16,68857370,C,T,784.976,0.255,Uncertain significance,,Deleterious,Probably Damaging,,,
+P-19-04026,Breast Cancer,CDH1,759del (D254IfsX28),6,254,16,68844169,AC,A,100.0,0.49,,,,,,,
+P-19-04026,Breast Cancer,CDKN2A,238C>T (R80X),2,80,9,21971120,G,A,1284.03,0.325,"Likely pathogenic, risk factor",,,,11.49%,227,1975
+P-19-04026,Breast Cancer,ERBB2,2223_2234dup (Y742_A745dup),20,742,17,37880981,A,AGCATACGTGATG,1939.93,0.266,,,,,,,
+P-19-04026,Breast Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04026,Breast Cancer,TP53,586C>T (R196X),6,196,17,7578263,G,A,100.0,0.456,Pathogenic,,,,1.26%,377,29999
+P-19-04026,Breast Cancer,TSC1,2797G>A (V933I),21,933,9,135772826,C,T,1510.75,0.327,,,Deleterious,Possibly Damaging,,,
+P-19-04045,Ovarian Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04045,Ovarian Cancer,NF1,5445G>T (Q1815H),38,1815,17,29654693,G,T,845.873,0.178,,,Tolerated,Possibly Damaging,,,
+P-19-04045,Ovarian Cancer,PIK3CA,1633G>A (E545K),10,545,3,178936091,G,A,2202.65,0.267,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,16.93%,2493,14724
+P-19-04045,Ovarian Cancer,PPP2R1A,547C>T (R183W),5,183,19,52715982,C,T,3184.98,0.282,Likely pathogenic,,Deleterious,Probably Damaging,11.5%,72,626
+P-19-04045,Ovarian Cancer,PTEN,26T>C (V9A),1,9,10,89624252,T,C,3053.93,0.302,,,Deleterious,Probably Damaging,,,
+P-19-04119,Bladder Cancer,IDH1,394C>A (R132S),4,132,2,209113113,G,T,3119.31,0.337,Pathogenic/Likely pathogenic,,Deleterious Low Confidence,Possibly Damaging,1.79%,187,10470
+P-19-04119,Bladder Cancer,TP53,800G>A (R267Q),8,267,17,7577138,C,T,1230.75,0.279,Uncertain significance,,Deleterious,Probably Damaging,0.06%,18,29999
+P-19-04119,Bladder Cancer,TSC2,274G>A (E92K),4,92,16,2103391,G,A,360.114,0.241,,,Deleterious,Probably Damaging,0.1%,1,1030
+P-19-04119,Bladder Cancer,TSC2,5174T>G (V1725G),41,1725,16,2138241,T,G,1112.68,0.575,,,Deleterious,Probably Damaging,,,
+P-19-04149,Ovarian Cancer,CCNE1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04149,Ovarian Cancer,TP53,892G>T (E298X),8,298,17,7577046,C,A,100.0,0.758,Pathogenic,,,,0.31%,92,29999
+P-19-04155,Lung Cancer,EGFR,2573T>G (L858R),21,858,7,55259515,T,G,2468.27,0.23,drug response,,Deleterious,Probably Damaging,17.63%,2549,14461
+P-19-04155,Lung Cancer,PTCH1,2596G>A (G866R),16,866,9,98224245,C,T,100.0,0.525,Uncertain significance,,Deleterious,Probably Damaging,,,
+P-19-04180,Bladder Cancer,NO VARIANTS REPORTED
+P-19-04185,Breast Cancer,AKT1,49G>A (E17K),3,17,14,105246551,C,T,100.0,0.575,Uncertain significance,,Deleterious,Probably Damaging,53.78%,590,1097
+P-19-04185,Breast Cancer,ATM,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04185,Breast Cancer,CCND1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04185,Breast Cancer,FGFR1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04185,Breast Cancer,PTCH1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04185,Breast Cancer,TSC1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04221,Prostate Cancer,NO VARIANTS REPORTED
+P-19-04235,Ovarian Cancer,BRCA1,5566C>T (R1856X),24,1856,17,41197784,G,A,1376.49,0.229,Pathogenic,,,,,,
+P-19-04235,Ovarian Cancer,TP53,832C>T (P278S),8,278,17,7577106,G,A,1143.36,0.162,Conflicting interpretations of pathogenicity,Pathogenic(1)|Uncertain_significance(2),Deleterious,Probably Damaging,0.43%,128,29999
+P-19-04237,Colorectal Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,647.226,0.162,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04237,Colorectal Cancer,PIK3CA,1633G>A (E545K),10,545,3,178936091,G,A,129.273,0.074,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,16.93%,2493,14724
+P-19-04238,Prostate Cancer,NO VARIANTS REPORTED
+P-19-04253,Ovarian Cancer,BRAF,1799T>A (V600E),15,600,7,140453136,A,T,100.0,0.49,Pathogenic,,Deleterious,Probably Damaging,52.44%,28363,54087
+P-19-04253,Ovarian Cancer,CDKN2A,330G>A (W110X),2,110,9,21971028,C,T,100.0,0.521,Uncertain significance,,,,3.14%,62,1975
+P-19-04253,Ovarian Cancer,TSC1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04254,Breast Cancer,NO VARIANTS REPORTED
+P-19-04255,Breast Cancer,NF1,503C>G (S168X),5,168,17,29496932,C,G,167.058,0.273,Pathogenic,,,,0.05%,1,2013
+P-19-04255,Breast Cancer,PIK3CA,2176G>A (E726K),14,726,3,178938934,G,A,331.233,0.15,Pathogenic,,Tolerated,Benign,0.71%,104,14724
+P-19-04255,Breast Cancer,PIK3CA,241G>A (E81K),2,81,3,178916854,G,A,332.43,0.1,Likely pathogenic,,Deleterious,Probably Damaging,0.53%,78,14724
+P-19-04255,Breast Cancer,PIK3CA,3140A>G (H1047R),21,1047,3,178952085,A,G,1617.1,0.32,Pathogenic,,Tolerated,Benign,21.16%,3115,14724
+P-19-04255,Breast Cancer,TP53,843C>G (D281E),8,281,17,7577095,G,C,1373.98,0.234,Uncertain significance,,Deleterious,Probably Damaging,0.09%,26,29999
+P-19-04256,Unknown Primary Cancer,APC,3880C>T (Q1294X),16,1294,5,112175171,C,T,171.075,0.136,Pathogenic,,,,0.52%,25,4788
+P-19-04256,Unknown Primary Cancer,KRAS,35G>A (G12D),2,12,12,25398284,C,T,37.4325,0.055,Pathogenic,,Deleterious,Benign,33.94%,15326,45154
+P-19-04257,Esophageal Cancer,CCND1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04257,Esophageal Cancer,EGFR,345T>A (N115K),3,115,7,55211102,T,A,296.205,0.108,Uncertain significance,,Tolerated,Benign,0.01%,1,14461
+P-19-04257,Esophageal Cancer,TET2,5885C>T (P1962L),11,1962,4,106197552,C,T,1307.58,0.517,not provided,,Deleterious,Possibly Damaging,0.33%,9,2700
+P-19-04257,Esophageal Cancer,TP53,637C>T (R213X),6,213,17,7578212,G,A,1736.39,0.38,Pathogenic,,,,1.89%,567,29999
+P-19-04258,Breast Cancer,CCND1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04258,Breast Cancer,CDK6,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04258,Breast Cancer,TP53,817C>T (R273C),8,273,17,7577121,G,A,100.0,0.728,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,3.26%,979,29999
+P-19-04260,Lung Cancer,NF2,382G>C (D128H),4,128,22,30038209,G,C,100.0,0.554,,,Deleterious,Possibly Damaging,,,
+P-19-04260,Lung Cancer,NF2,385G>T (E129X),4,129,22,30038212,G,T,100.0,0.563,,,,,0.14%,1,701
+P-19-04260,Lung Cancer,TP53,220dup (A74GfsX75),4,74,17,7579466,G,GC,927.851,0.219,,,,,,,
+P-19-04265,Ovarian Cancer,TP53,839G>A (R280K),8,280,17,7577099,C,T,1324.35,0.195,Conflicting interpretations of pathogenicity,Likely_pathogenic(1)|Uncertain_significance(1),Deleterious,Probably Damaging,0.36%,107,29999
+P-19-04265,Ovarian Cancer,TSC2,3989C>T (T1330M),33,1330,16,2133801,C,T,2625.84,0.547,Conflicting interpretations of pathogenicity,,Tolerated Low Confidence,Benign,0.39%,4,1030
+P-19-04266,Lung Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04266,Lung Cancer,TP53,336_339del (F113CfsX9),4,113,17,7579347,AGAAG,A,2494.35,0.706,,,,,,,
+P-19-04269,Lung Cancer,KDR,3909C>A (S1303R),30,1303,4,55946270,G,T,3194.15,0.394,,,Tolerated,Probably Damaging,,,
+P-19-04269,Lung Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,2829.56,0.337,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04270,Unknown Primary Cancer,PIK3CA,1035T>A (N345K),5,345,3,178921553,T,A,100.0,0.461,Likely pathogenic,,Deleterious,Probably Damaging,1.33%,196,14724
+P-19-04270,Unknown Primary Cancer,TP53,997dup (R333PfsX4),10,333,17,7574029,C,CG,436.246,0.184,,,,,,,
+P-19-04271,Pancreatic Cancer,KRAS,35G>A (G12D),2,12,12,25398284,C,T,770.13,0.17,Pathogenic,,Deleterious,Benign,33.94%,15326,45154
+P-19-04271,Pancreatic Cancer,MAP2K1,631G>A (V211I),6,211,15,66774155,G,A,100.0,0.428,Uncertain significance,,Deleterious,Probably Damaging,,,
+P-19-04272,Pancreatic Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,1151.04,0.239,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04272,Pancreatic Cancer,TP53,569C>T (P190L),6,190,17,7578280,G,A,579.415,0.233,Uncertain significance,,Deleterious,Possibly Damaging,0.17%,50,29999
+P-19-04278,Lung Cancer,NO VARIANTS REPORTED
+P-19-04279,Liver and Bile Duct Cancer,NO VARIANTS REPORTED
+P-19-04280,Bladder Cancer,APC,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04280,Bladder Cancer,BRCA2,8032A>G (R2678G),18,2678,13,32937371,A,G,1784.61,0.486,Uncertain significance,,Deleterious,Possibly Damaging,,,
+P-19-04280,Bladder Cancer,FBXW7,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04280,Bladder Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04280,Bladder Cancer,TP53,797G>A (G266E),8,266,17,7577141,C,T,2003.66,0.335,Conflicting interpretations of pathogenicity,,Deleterious,Probably Damaging,0.37%,110,29999
+P-19-04282,Breast Cancer,NO VARIANTS REPORTED
+P-19-04283,Breast Cancer,PIK3CA,3140A>G (H1047R),21,1047,3,178952085,A,G,2031.38,0.327,Pathogenic,,Tolerated,Benign,21.16%,3115,14724
+P-19-04283,Breast Cancer,TP53,329G>C (R110P),4,110,17,7579358,C,G,2316.22,0.451,Pathogenic/Likely pathogenic,,Deleterious,Possibly Damaging,0.13%,38,29999
+P-19-04284,Esophageal Cancer,FBXW7,45_46insCCT (T15_G16insP),2,15,4,153332910,C,CAGG,100.0,0.61,not provided,,,,,,
+P-19-04284,Esophageal Cancer,KRAS,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04284,Esophageal Cancer,TP53,711G>A (M237I),7,237,17,7577570,C,T,914.709,0.216,Conflicting interpretations of pathogenicity,Likely_pathogenic(1)|Uncertain_significance(1),Deleterious,Probably Damaging,0.46%,139,29999
+P-19-04285,Lung Cancer,CDH1,221G>A (R74Q),3,74,16,68835630,G,A,100.0,0.444,Uncertain significance,,Tolerated,Possibly Damaging,0.33%,3,908
+P-19-04285,Lung Cancer,NFE2L2,92G>T (G31V),2,31,2,178098953,C,A,2514.6,0.289,,,Deleterious,Probably Damaging,0.44%,3,680
+P-19-04285,Lung Cancer,TP53,469G>T (V157F),5,157,17,7578461,C,A,2467.31,0.441,Conflicting interpretations of pathogenicity,Likely_pathogenic(2)|Uncertain_significance(1),Deleterious,Probably Damaging,0.88%,265,29999
+P-19-04288,Lung Cancer,KRAS,35G>A (G12D),2,12,12,25398284,C,T,100.0,0.459,Pathogenic,,Deleterious,Benign,33.94%,15326,45154
+P-19-04288,Lung Cancer,TP53,602dup (L201FfsX8),6,201,17,7578246,C,CA,1184.33,0.323,,,,,,,
+P-19-04291,Lung Cancer,EGFR,2235_2249del (E746_A750del),19,746,7,55242464,AGGAATTAAGAGAAGC,A,1590.67,0.226,drug response,,,,,,
+P-19-04291,Lung Cancer,RB1,2099T>G (L700W),20,700,13,49033962,T,G,618.861,0.246,,,Deleterious,Probably Damaging,,,
+P-19-04291,Lung Cancer,TP53,572del (P191LfsX56),6,191,17,7578276,AG,A,274.322,0.147,,,,,,,
+P-19-04295,Breast Cancer,ATM,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04295,Breast Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04295,Breast Cancer,CCND1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04295,Breast Cancer,CDH1,601_602insT (P201LfsX8),5,201,16,68842665,C,CT,100.0,0.768,,,,,,,
+P-19-04295,Breast Cancer,CDH1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04295,Breast Cancer,ESR1,1613A>G (D538G),9,538,6,152419926,A,G,100.0,0.458,,,Deleterious,Possibly Damaging,10.06%,107,1064
+P-19-04295,Breast Cancer,PTEN,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04295,Breast Cancer,TET2,3869C>T (S1290L),7,1290,4,106180841,C,T,1309.14,0.463,,,Deleterious,Probably Damaging,,,
+P-19-04296,Ovarian Cancer,ATM,4921G>C (D1641H),33,1641,11,108168025,G,C,3191.14,0.656,Uncertain significance,,Deleterious,Possibly Damaging,,,
+P-19-04296,Ovarian Cancer,KRAS,35G>A (G12D),2,12,12,25398284,C,T,100.0,0.535,Pathogenic,,Deleterious,Benign,33.94%,15326,45154
+P-19-04296,Ovarian Cancer,RB1,13del (T5PfsX60),1,5,13,48878057,CA,C,1539.48,0.824,,,,,,,
+P-19-04297,Colorectal Cancer,APC,4488dup (P1497SfsX17),16,1497,5,112175778,C,CT,1356.6,0.312,,,,,,,
+P-19-04297,Colorectal Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,3161.71,0.279,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04297,Colorectal Cancer,PIK3CA,1633G>A (E545K),10,545,3,178936091,G,A,100.0,0.33,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,16.93%,2493,14724
+P-19-04297,Colorectal Cancer,TP53,607G>T (V203L),6,203,17,7578242,C,A,100.0,0.401,Uncertain significance,,Deleterious,Benign,0.03%,9,29999
+P-19-04306,Breast Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04306,Breast Cancer,PTEN,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04306,Breast Cancer,TP53,814G>A (V272M),8,272,17,7577124,C,T,100.0,0.588,Uncertain significance,,Deleterious,Probably Damaging,0.45%,134,29999
+P-19-04308,Prostate Cancer,NO VARIANTS REPORTED
+P-19-04309,Esophageal Cancer,TP53,586C>T (R196X),6,196,17,7578263,G,A,100.0,0.313,Pathogenic,,,,1.26%,377,29999
+P-19-04310,Lung Cancer,APC,3082A>C (S1028R),16,1028,5,112174373,A,C,901.572,0.227,,,Deleterious Low Confidence,Probably Damaging,,,
+P-19-04310,Lung Cancer,TP53,848G>C (R283P),8,283,17,7577090,C,G,739.119,0.154,Uncertain significance,,Deleterious,Probably Damaging,0.1%,30,29999
+P-19-04312,Lung Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,461.637,0.119,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04313,Lung Cancer,CDKN2A,212A>C (N71T),2,71,9,21971146,T,G,100.0,0.589,,,Deleterious,Probably Damaging,,,
+P-19-04313,Lung Cancer,TP53,397del (M133CfsX37),5,133,17,7578532,AT,A,3029.71,0.304,,,,,,,
+P-19-04317,Stomach Cancer,TP53,743G>A (R248Q),7,248,17,7577538,C,T,1053.97,0.224,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,3.73%,1118,29999
+P-19-04318,Pancreatic Cancer,KRAS,183A>C (Q61H),3,61,12,25380275,T,G,100.0,0.535,Pathogenic/Likely pathogenic,,Deleterious,Benign,0.64%,289,45154
+P-19-04318,Pancreatic Cancer,VHL,104C>A (A35D),1,35,3,10183635,C,A,726.097,0.425,Uncertain significance,,Deleterious Low Confidence,Benign,,,
+P-19-04319,Lung Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,2489.57,0.309,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04319,Lung Cancer,RAC1,80C>T (A27V),2,27,7,6426887,C,T,2165.78,0.549,,,Deleterious,Benign,,,
+P-19-04321,Colorectal Cancer,CDKN2A,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04321,Colorectal Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04321,Colorectal Cancer,TP53,524G>A (R175H),5,175,17,7578406,C,T,1726.25,0.405,Pathogenic,,Tolerated,Benign,5.25%,1576,29999
+P-19-04322,Lung Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,13.4063,0.042,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04322,Lung Cancer,TP53,329G>T (R110L),4,110,17,7579358,C,A,44.9011,0.052,Pathogenic/Likely pathogenic,,Deleterious,Benign,0.18%,55,29999
+P-19-04324,Lung Cancer,KIT,200C>G (T67S),2,67,4,55561810,C,G,100.0,0.493,Uncertain significance,,Tolerated,Benign,0.04%,2,5321
+P-19-04324,Lung Cancer,MET,2471A>G (D824G),11,824,7,116403210,A,G,3050.12,0.489,Uncertain significance,,Deleterious,Possibly Damaging,,,
+P-19-04324,Lung Cancer,RB1,958C>T (R320X),10,320,13,48941648,C,T,108.554,0.152,Pathogenic,,,,1.88%,21,1117
+P-19-04324,Lung Cancer,RET,KIF5Be15-RETe12 Fusion,,,,,,,,,,,,,,,
+P-19-04324,Lung Cancer,TERT,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04325,Colorectal Cancer,BRAF,1799T>A (V600E),15,600,7,140453136,A,T,683.405,0.202,Pathogenic,,Deleterious,Probably Damaging,52.44%,28363,54087
+P-19-04325,Colorectal Cancer,TP53,598_604del (N200VfsX45),6,200,17,7578244,CGCAAATT,C,444.91,0.16,,,,,,,
+P-19-04326,Liver and Bile Duct Cancer,NO VARIANTS REPORTED
+P-19-04327,Lung Cancer,ATM,5414G>A (W1805X),36,1805,11,108173674,G,A,100.0,0.508,Pathogenic/Likely pathogenic,,,,,,
+P-19-04327,Lung Cancer,CDKN2A,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04327,Lung Cancer,FGFR1,521C>G (T174R),5,174,8,38285890,G,C,1721.0,0.22,,,Tolerated,Benign,,,
+P-19-04327,Lung Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,3220.76,0.298,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04327,Lung Cancer,PIK3CA,3140A>G (H1047R),21,1047,3,178952085,A,G,100.0,0.424,Pathogenic,,Tolerated,Benign,21.16%,3115,14724
+P-19-04327,Lung Cancer,TET2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04327,Lung Cancer,TSC2,2438T>C (V813A),22,813,16,2124283,T,C,1632.37,0.441,,,Deleterious,Probably Damaging,,,
+P-19-04328,Lung Cancer,BAP1,176G>T (R59L),4,59,3,52442569,C,A,244.098,0.116,,,Deleterious,Probably Damaging,,,
+P-19-04328,Lung Cancer,BRAF,1406G>T (G469V),11,469,7,140481402,C,A,525.848,0.107,Pathogenic,,Deleterious,Probably Damaging,0.05%,28,54087
+P-19-04328,Lung Cancer,CDKN2A,213C>A (N71K),2,71,9,21971145,G,T,186.506,0.14,,,Deleterious,Probably Damaging,0.1%,2,1975
+P-19-04328,Lung Cancer,HRAS,34G>T (G12C),2,12,11,534289,C,A,158.937,0.089,Pathogenic,,Deleterious,Benign,1.84%,39,2117
+P-19-04328,Lung Cancer,KRAS,108A>G (I36M),2,36,12,25398211,T,C,240.497,0.108,Likely pathogenic,,Deleterious,Probably Damaging,0.01%,4,45154
+P-19-04328,Lung Cancer,PTCH1,3616C>T (R1206C),22,1206,9,98211539,G,A,2366.58,0.513,Uncertain significance,,Deleterious,Possibly Damaging,0.1%,1,1026
+P-19-04328,Lung Cancer,TET2,2417del (L806RfsX7),3,806,4,106157515,CT,C,592.003,0.183,,,,,,,
+P-19-04328,Lung Cancer,TP53,395A>T (K132M),5,132,17,7578535,T,A,100.0,0.3,Uncertain significance,,Tolerated,Possibly Damaging,0.07%,21,29999
+P-19-04330,Colorectal Cancer,AKT1,49G>A (E17K),3,17,14,105246551,C,T,100.0,0.549,Uncertain significance,,Deleterious,Probably Damaging,53.78%,590,1097
+P-19-04330,Colorectal Cancer,APC,3279del (F1093LfsX33),16,1093,5,112174566,AT,A,3121.23,0.408,,,,,,,
+P-19-04330,Colorectal Cancer,APC,4393_4394del (S1465WfsX3),16,1465,5,112175675,AAG,A,680.82,0.19,,,,,,,
+P-19-04330,Colorectal Cancer,BRAF,1799T>A (V600E),15,600,7,140453136,A,T,1495.41,0.365,Pathogenic,,Deleterious,Probably Damaging,52.44%,28363,54087
+P-19-04330,Colorectal Cancer,KIT,1900C>T (R634W),13,634,4,55594197,C,T,506.067,0.2,Uncertain significance,,Deleterious,Probably Damaging,0.07%,4,5321
+P-19-04330,Colorectal Cancer,TET2,4138C>A (H1380N),9,1380,4,106190860,C,A,100.0,0.394,,,Deleterious,Probably Damaging,,,
+P-19-04331,Colorectal Cancer,APC,1660C>T (R554X),14,554,5,112164586,C,T,2826.98,0.486,Pathogenic,,,,0.98%,47,4788
+P-19-04331,Colorectal Cancer,PIK3CA,1252G>A (E418K),8,418,3,178927974,G,A,430.398,0.262,Uncertain significance,,Tolerated,Possibly Damaging,0.14%,20,14724
+P-19-04331,Colorectal Cancer,PIK3CA,3140A>G (H1047R),21,1047,3,178952085,A,G,1899.73,0.316,Pathogenic,,Tolerated,Benign,21.16%,3115,14724
+P-19-04331,Colorectal Cancer,PTEN,511C>T (Q171X),6,171,10,89711893,C,T,2117.6,0.553,Pathogenic,,,,1.12%,34,3042
+P-19-04331,Colorectal Cancer,SMAD4,1558G>T (E520X),12,520,18,48604736,G,T,2197.48,0.37,,,,,0.36%,6,1646
+P-19-04332,Lung Cancer,APC,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04332,Lung Cancer,BRCA2,352C>T (R118C),4,118,13,32899248,C,T,1654.12,0.782,Conflicting interpretations of pathogenicity,Likely_benign(2)|Uncertain_significance(5),Tolerated,Benign,0.15%,2,1345
+P-19-04332,Lung Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04332,Lung Cancer,CDKN2A,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04332,Lung Cancer,FBXW7,1393C>T (R465C),9,465,4,153249385,G,A,2007.06,0.29,Likely pathogenic,,Deleterious,Probably Damaging,11.47%,225,1962
+P-19-04332,Lung Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04332,Lung Cancer,PTEN,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04333,Unknown Primary Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,1770.79,0.293,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04333,Unknown Primary Cancer,SMAD4,984C>A (Y328X),9,328,18,48591821,C,A,1798.11,0.329,,,,,0.12%,2,1646
+P-19-04333,Unknown Primary Cancer,TP53,388C>T (L130F),5,130,17,7578542,G,A,100.0,0.354,Uncertain significance,,Deleterious,Probably Damaging,0.07%,22,29999
+P-19-04335,Cervical Cancer,FBXW7,1394G>A (R465H),9,465,4,153249384,C,T,227.101,0.089,Likely pathogenic,,Deleterious,Probably Damaging,9.22%,181,1962
+P-19-04335,Cervical Cancer,U2AF1,71T>C (I24T),2,24,21,44524486,A,G,159.792,0.1,,,Deleterious,Possibly Damaging,0.61%,5,819
+P-19-04341,Colorectal Cancer,APC,3502G>T (E1168X),16,1168,5,112174793,G,T,1468.67,0.323,,,,,0.02%,1,4788
+P-19-04341,Colorectal Cancer,APC,5955_5959dup (I1987NfsX59),16,1987,5,112177244,G,GAACCT,335.747,0.245,,,,,,,
+P-19-04341,Colorectal Cancer,BRCA1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04341,Colorectal Cancer,KRAS,34G>A (G12S),2,12,12,25398285,C,T,100.0,0.797,Pathogenic,,Deleterious,Possibly Damaging,4.48%,2021,45154
+P-19-04341,Colorectal Cancer,NF1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04341,Colorectal Cancer,TP53,80del (P27LfsX17),3,27,17,7579715,AG,A,100.0,0.7,,,,,,,
+P-19-04342,Prostate Cancer,BRCA2,5016C>A (Y1672X),11,1672,13,32913508,C,A,2523.03,0.522,,,,,,,
+P-19-04342,Prostate Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04342,Prostate Cancer,RB1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04343,Lung Cancer,APC,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04343,Lung Cancer,BRCA1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04343,Lung Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04343,Lung Cancer,EGFR,2239_2240delinsCC (L747P),19,747,7,55242469,TT,CC,100.0,0.444,Uncertain significance,,Deleterious,Probably Damaging,,,
+P-19-04343,Lung Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04344,Lung Cancer,NO VARIANTS REPORTED
+P-19-04347,Neuroendocrine Tumors,ATM,Copy Number Loss
+P-19-04350,Lung Cancer,ATM,2289del (F763LfsX14),15,763,11,108128243,GT,G,100.0,0.383,,,,,,,
+P-19-04350,Lung Cancer,ATM,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04350,Lung Cancer,BCL2L1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04350,Lung Cancer,TP53,646G>A (V216M),6,216,17,7578203,C,T,100.0,0.757,Conflicting interpretations of pathogenicity,Likely_pathogenic(3)|Pathogenic(1)|Uncertain_significance(1),Deleterious,Probably Damaging,0.41%,123,29999
+P-19-04351,Lung Cancer,STK11,180C>A (Y60X),1,60,19,1207092,C,A,3138.45,0.31,Pathogenic,,,,0.43%,3,700
+P-19-04351,Lung Cancer,TP53,659A>C (Y220S),6,220,17,7578190,T,G,100.0,0.489,Pathogenic,,Deleterious,Probably Damaging,0.09%,26,29999
+P-19-04355,Lung Cancer,NO VARIANTS REPORTED
+P-19-04356,Colorectal Cancer,APC,2842dup (S948FfsX15),16,948,5,112174131,G,GT,687.828,0.2,,,,,,,
+P-19-04356,Colorectal Cancer,BRCA1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04356,Colorectal Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,1188.61,0.165,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04356,Colorectal Cancer,SMAD4,305C>T (P102L),3,102,18,48575111,C,T,2399.99,0.268,,,Deleterious,Probably Damaging,0.06%,1,1646
+P-19-04356,Colorectal Cancer,TP53,844C>T (R282W),8,282,17,7577094,G,A,100.0,0.292,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,2.57%,771,29999
+P-19-04357,Lung Cancer,MET,METe13-METe15 Fusion
+P-19-04358,Colorectal Cancer,ERBB2,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04358,Colorectal Cancer,GAS6,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04358,Colorectal Cancer,MYC,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04358,Colorectal Cancer,RB1,1161_1167del (M387IfsX12),12,387,13,48947573,TGATTTTA,T,2527.59,0.456,,,,,,,
+P-19-04358,Colorectal Cancer,TP53,807_818del (F270_R273del),8,270,17,7577119,ACGCACCTCAAAG,A,2394.08,0.335,,,,,,,
+P-19-04359,Uterine Cancer,NO VARIANTS REPORTED
+P-19-04361,Lung Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,120.313,0.071,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04361,Lung Cancer,TET2,4350del (R1451GfsX7),10,1451,4,106193884,CT,C,1975.89,0.531,,,,,,,
+P-19-04362,Breast Cancer,KIT,1703A>C (Y568S),11,568,4,55593637,A,C,180.928,0.095,,,Deleterious,Probably Damaging,0.02%,1,5321
+P-19-04362,Breast Cancer,PIK3CA,3140A>G (H1047R),21,1047,3,178952085,A,G,381.734,0.117,Pathogenic,,Tolerated,Benign,21.16%,3115,14724
+P-19-04364,Lung Cancer,NO VARIANTS REPORTED
+P-19-04365,Kidney and Renal Pelvis Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,100.0,0.569,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04366,Esophageal Cancer,NOTCH1,4078G>A (G1360S),25,1360,9,139400270,C,T,100.0,0.543,Uncertain significance,,Deleterious,Probably Damaging,0.03%,1,3093
+P-19-04366,Esophageal Cancer,SMARCB1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04366,Esophageal Cancer,TP53,637C>T (R213X),6,213,17,7578212,G,A,100.0,0.603,Pathogenic,,,,1.89%,567,29999
+P-19-04366,Esophageal Cancer,TSC1,2153G>A (R718Q),17,718,9,135779093,C,T,2000.72,0.484,Uncertain significance,,Deleterious,Probably Damaging,,,
+P-19-04367,Uterine Cancer,ATM,1290_1291del (C430X),10,430,11,108121479,CTG,C,398.321,0.276,,,,,,,
+P-19-04367,Uterine Cancer,CTNNB1,95A>G (D32G),3,32,3,41266098,A,G,737.325,0.223,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,1.61%,112,6947
+P-19-04367,Uterine Cancer,JAK2,1711G>A (G571S),13,571,9,5072561,G,A,2956.51,0.504,,,Tolerated,Possibly Damaging,0.01%,6,48344
+P-19-04367,Uterine Cancer,MAP2K1,233A>C (N78T),2,78,15,66727517,A,C,607.257,0.255,,,Deleterious,Possibly Damaging,,,
+P-19-04367,Uterine Cancer,PIK3CA,1258T>C (C420R),8,420,3,178927980,T,C,661.843,0.328,Pathogenic,,Tolerated,Possibly Damaging,1.05%,155,14724
+P-19-04367,Uterine Cancer,PIK3CA,223C>G (Q75E),2,75,3,178916836,C,G,1727.13,0.313,,,Deleterious,Possibly Damaging,0.03%,5,14724
+P-19-04367,Uterine Cancer,PIK3R1,1669C>T (R557X),13,557,5,67591076,C,T,1362.98,0.257,,,,,1.0%,6,598
+P-19-04367,Uterine Cancer,PTEN,388C>G (R130G),5,130,10,89692904,C,G,2602.39,0.248,Pathogenic,,Deleterious,Probably Damaging,6.25%,190,3042
+P-19-04367,Uterine Cancer,PTEN,955_956insAA (T319KfsX3),8,319,10,89720803,T,TAA,1602.9,0.214,,,,,,,
+P-19-04368,Breast Cancer,CCND1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04368,Breast Cancer,CDH1,1247del (L416X),9,416,16,68847323,AT,A,1056.38,0.344,,,,,,,
+P-19-04368,Breast Cancer,FBXW7,670C>T (R224X),4,224,4,153268138,G,A,2704.96,0.369,,,,,0.56%,11,1962
+P-19-04368,Breast Cancer,PIK3CA,3140A>G (H1047R),21,1047,3,178952085,A,G,100.0,0.392,Pathogenic,,Tolerated,Benign,21.16%,3115,14724
+P-19-04373,Colorectal Cancer,APC,1495C>T (R499X),12,499,5,112162891,C,T,251.77,0.147,Pathogenic,,,,1.15%,55,4788
+P-19-04373,Colorectal Cancer,BRCA2,10202C>T (T3401M),27,3401,13,32972852,C,T,100.0,0.424,Conflicting interpretations of pathogenicity,,Deleterious,Possibly Damaging,0.07%,1,1345
+P-19-04373,Colorectal Cancer,FBXW7,1411G>T (E471X),9,471,4,153249367,C,A,241.262,0.124,,,,,0.1%,2,1962
+P-19-04373,Colorectal Cancer,TP53,701A>G (Y234C),7,234,17,7577580,T,C,1402.22,0.242,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,0.48%,143,29999
+P-19-04375,Stomach Cancer,CDH1,760G>T (D254Y),6,254,16,68844172,G,T,2040.22,0.221,Pathogenic,,Deleterious,Probably Damaging,0.77%,7,908
+P-19-04375,Stomach Cancer,CDKN2A,348_356del (D116_A118del),2,116,9,21971001,CTCAGCCAGG,C,576.121,0.171,,,,,,,
+P-19-04375,Stomach Cancer,EGFR,345T>A (N115K),3,115,7,55211102,T,A,100.0,0.45,Uncertain significance,,Tolerated,Benign,0.01%,1,14461
+P-19-04375,Stomach Cancer,SMO,1921C>G (P641A),11,641,7,128851596,C,G,100.0,0.492,not provided,,Deleterious,Probably Damaging,0.16%,1,611
+P-19-04375,Stomach Cancer,TP53,949C>T (Q317X),9,317,17,7576897,G,A,1965.32,0.248,Pathogenic/Likely pathogenic,,,,0.25%,75,29999
+P-19-04376,Lung Cancer,KRAS,37G>T (G13C),2,13,12,25398282,C,A,894.971,0.158,Pathogenic,,Deleterious,Probably Damaging,0.85%,383,45154
+P-19-04380,Lung Cancer,ATM,8533T>C (W2845R),58,2845,11,108216584,T,C,381.24,0.166,,,Deleterious,Probably Damaging,,,
+P-19-04380,Lung Cancer,MET,METe13-METe15 Fusion,,,,,,,,,,,,,,,
+P-19-04385,Lung Cancer,CCND1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04385,Lung Cancer,FBXW7,397A>G (R133G),2,133,4,153332559,T,C,100.0,0.502,not provided,,Deleterious Low Confidence,Possibly Damaging,,,
+P-19-04385,Lung Cancer,KRAS,37G>T (G13C),2,13,12,25398282,C,A,2184.02,0.232,Pathogenic,,Deleterious,Probably Damaging,0.85%,383,45154
+P-19-04385,Lung Cancer,TP53,481G>A (A161T),5,161,17,7578449,C,T,432.558,0.19,Conflicting interpretations of pathogenicity,Likely_pathogenic(1)|Uncertain_significance(4),Deleterious,Probably Damaging,0.24%,73,29999
+P-19-04386,Lung Cancer,NF1,636dup (I213YfsX3),6,213,17,29508487,G,GT,2075.49,0.351,,,,,,,
+P-19-04387,Unknown Primary Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,1386.67,0.18,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04387,Unknown Primary Cancer,TP53,499_500del (Q167AfsX13),5,167,17,7578429,CTG,C,388.558,0.194,,,,,,,
+P-19-04391,Lung Cancer,NO VARIANTS REPORTED
+P-19-04393,Colorectal Cancer,ATM,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04393,Colorectal Cancer,KRAS,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04393,Colorectal Cancer,NF2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04393,Colorectal Cancer,TP53,524G>A (R175H),5,175,17,7578406,C,T,3130.89,0.675,Pathogenic,,Tolerated,Benign,5.25%,1576,29999
+P-19-04394,Breast Cancer,FGFR2,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04394,Breast Cancer,MYC,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04394,Breast Cancer,NOTCH1,4262A>G (N1421S),25,1421,9,139400086,T,C,1721.51,0.457,Conflicting interpretations of pathogenicity,Likely_benign(1)|Uncertain_significance(1),Tolerated,Probably Damaging,,,
+P-19-04394,Breast Cancer,TP53,499C>T (Q167X),5,167,17,7578431,G,A,1018.09,0.428,Pathogenic/Likely pathogenic,,,,0.15%,45,29999
+P-19-04396,Lung Cancer,NO VARIANTS REPORTED
+P-19-04404,Lung Cancer,KRAS,35G>A (G12D),2,12,12,25398284,C,T,425.299,0.143,Pathogenic,,Deleterious,Benign,33.94%,15326,45154
+P-19-04413,Breast Cancer,FGFR1,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04413,Breast Cancer,NOTCH1,2446A>G (N816D),15,816,9,139407494,T,C,1643.04,0.484,Uncertain significance,,Tolerated,Probably Damaging,,,
+P-19-04413,Breast Cancer,TP53,743G>A (R248Q),7,248,17,7577538,C,T,1377.58,0.331,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,3.73%,1118,29999
+P-19-04415,Lung Cancer,MYCN,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04415,Lung Cancer,PDGFRA,1658C>T (P553L),12,553,4,55141012,C,T,330.018,0.195,Uncertain significance,,Deleterious,Probably Damaging,0.12%,2,1742
+P-19-04415,Lung Cancer,TP53,797G>A (G266E),8,266,17,7577141,C,T,2566.24,0.492,Conflicting interpretations of pathogenicity,,Deleterious,Probably Damaging,0.37%,110,29999
+P-19-04416,Lung Cancer,CDKN2A,220G>T (D74Y),2,74,9,21971138,C,A,356.377,0.156,,,Deleterious,Probably Damaging,0.41%,8,1975
+P-19-04416,Lung Cancer,PIK3CA,1637A>C (Q546P),10,546,3,178936095,A,C,100.0,0.493,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,0.26%,38,14724
+P-19-04416,Lung Cancer,TP53,467G>C (R156P),5,156,17,7578463,C,G,738.976,0.263,Likely pathogenic,,Tolerated,Possibly Damaging,0.13%,38,29999
+P-19-04417,Lung Cancer,APC,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04417,Lung Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04417,Lung Cancer,PIK3R1,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04417,Lung Cancer,TP53,301A>T (K101X),4,101,17,7579386,T,A,1732.93,0.334,,,,,0.02%,7,29999
+P-19-04420,Lung Cancer,EGFR,2582T>A (L861Q),21,861,7,55259524,T,A,396.875,0.106,"Pathogenic/Likely pathogenic, drug response",,Deleterious,Probably Damaging,0.74%,107,14461
+P-19-04420,Lung Cancer,TET2,4127A>G (D1376G),9,1376,4,106190849,A,G,1317.1,0.277,,,Deleterious,Probably Damaging,,,
+P-19-04421,Melanoma,ATM,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04421,Melanoma,CDKN2A,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04421,Melanoma,GATA3,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04421,Melanoma,MET,3691G>A (D1231N),19,1231,7,116423416,G,A,2647.32,0.278,,,Deleterious,Probably Damaging,,,
+P-19-04422,Lung Cancer,ATM,8773G>T (G2925C),60,2925,11,108224594,G,T,570.128,0.333,,,Deleterious,Probably Damaging,,,
+P-19-04422,Lung Cancer,BRAF,1397G>T (G466V),11,466,7,140481411,C,A,100.0,0.361,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,0.07%,37,54087
+P-19-04422,Lung Cancer,MSH2,2170A>G (T724A),13,724,2,47703670,A,G,2570.03,0.483,Uncertain significance,,Deleterious,Probably Damaging,,,
+P-19-04422,Lung Cancer,TP53,142del (D48TfsX75),4,48,17,7579544,TC,T,100.0,0.523,,,,,,,
+P-19-04423,Thyroid Cancer,KRAS,35G>T (G12V),2,12,12,25398284,C,A,1130.87,0.188,Pathogenic,,Deleterious,Probably Damaging,23.14%,10450,45154
+P-19-04424,Endocrine Gland Cancer,KNSTRN,25C>G (L9V),1,9,15,40675061,C,G,1981.93,0.535,,,Deleterious Low Confidence,Benign,,,
+P-19-04425,Thyroid Cancer,NO VARIANTS REPORTED
+P-19-04428,Lung Cancer,BRAF,1799T>A (V600E),15,600,7,140453136,A,T,1423.51,0.24,Pathogenic,,Deleterious,Probably Damaging,52.44%,28363,54087
+P-19-04428,Lung Cancer,TP53,517G>T (V173L),5,173,17,7578413,C,A,1217.02,0.286,Pathogenic,,Deleterious,Possibly Damaging,0.32%,95,29999
+P-19-04429,Lung Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04429,Lung Cancer,CDKN2A,164_178del (G55_V59del),2,55,9,21971179,GCCACTCGGGCGCTGC,G,2335.92,0.447,,,,,,,
+P-19-04429,Lung Cancer,KRAS,34_35delinsTT (G12F),2,12,12,25398284,CC,AA,2687.54,0.259,,,Deleterious,Probably Damaging,,,
+P-19-04430,Colorectal Cancer,APC,3944C>G (S1315X),16,1315,5,112175235,C,G,100.0,0.588,,,,,0.25%,12,4788
+P-19-04430,Colorectal Cancer,NRAS,181C>A (Q61K),3,61,1,115256530,G,T,919.483,0.18,Uncertain significance,,Deleterious,Possibly Damaging,18.6%,1310,7043
+P-19-04430,Colorectal Cancer,SMAD4,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04430,Colorectal Cancer,TET2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04430,Colorectal Cancer,TP53,817C>T (R273C),8,273,17,7577121,G,A,2708.64,0.443,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,3.26%,979,29999
+P-19-04431,Breast Cancer,CDH1,1842_1848del (I614MfsX15),12,614,16,68856031,CATCATTG,C,102.717,0.116,,,,,,,
+P-19-04433,Breast Cancer,CDH1,889A>G (N297D),7,297,16,68845643,A,G,2050.22,0.351,,,Deleterious,Probably Damaging,,,
+P-19-04433,Breast Cancer,ERBB2,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04433,Breast Cancer,MYC,Copy Number Gain,,,,,,,,,,,,,,,
+P-19-04433,Breast Cancer,PAX5,234C>G (I78M),3,78,9,37015170,G,C,618.63,0.135,,,Deleterious,Probably Damaging,,,
+P-19-04433,Breast Cancer,TP53,574C>T (Q192X),6,192,17,7578275,G,A,1400.19,0.295,Pathogenic,,,,0.48%,144,29999
+P-19-04433,Breast Cancer,TP53,853G>A (E285K),8,285,17,7577085,C,T,2054.65,0.274,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,0.77%,231,29999
+P-19-04434,Lung Cancer,ATM,3091G>T (E1031X),21,1031,11,108143272,G,T,267.781,0.223,,,,,,,
+P-19-04434,Lung Cancer,BRCA2,Copy Number Loss,,,,,,,,,,,,,,,
+P-19-04434,Lung Cancer,KRAS,34G>T (G12C),2,12,12,25398285,C,A,100.0,0.667,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,11.48%,5182,45154
+P-19-04434,Lung Cancer,TP53,743G>A (R248Q),7,248,17,7577538,C,T,3160.87,0.336,Pathogenic/Likely pathogenic,,Deleterious,Probably Damaging,3.73%,1118,29999
+P-19-04439,Squamous Cell Carcinoma of the Skin,BRCA2,8764A>G (S2922G),22,2922,13,32953463,A,G,100.0,0.405,Conflicting interpretations of pathogenicity,Likely_benign(1)|Uncertain_significance(5),Deleterious,Probably Damaging,,,
+P-19-04439,Squamous Cell Carcinoma of the Skin,MAPK1,964G>A (E322K),7,322,22,22127164,C,T,2171.99,0.222,Likely pathogenic,,Deleterious,Probably Damaging,16.27%,27,166
+P-19-04439,Squamous Cell Carcinoma of the Skin,TP53,482C>A (A161D),5,161,17,7578448,G,T,1925.25,0.504,Conflicting interpretations of pathogenicity,Likely_pathogenic(1)|Uncertain_significance(1),Deleterious,Probably Damaging,0.06%,19,29999
+P-19-04439,Squamous Cell Carcinoma of the Skin,TSC2,2712C>G (F904L),24,904,16,2126141,C,G,2815.66,0.476,Conflicting interpretations of pathogenicity,Benign(1)|Likely_benign(1)|Uncertain_significance(2),Tolerated,Probably Damaging,0.1%,1,1030
+P-19-04440,Lung Cancer,EGFR,2235_2249del (E746_A750del),19,746,7,55242464,AGGAATTAAGAGAAGC,A,1271.88,0.256,drug response,,,,,,
+P-19-04440,Lung Cancer,TP53,839G>A (R280K),8,280,17,7577099,C,T,1255.96,0.172,Conflicting interpretations of pathogenicity,Likely_pathogenic(1)|Uncertain_significance(1),Deleterious,Probably Damaging,0.36%,107,29999
+P-19-04443,Breast Cancer,NO VARIANTS REPORTED
+P-19-04444,Breast Cancer,NO VARIANTS REPORTED
+P-19-04445,Breast Cancer,TP53,1020_1021dup (F341CfsX5),10,341,17,7574005,A,AAC,100.0,0.456,,,,,,,
+P-19-04447,Colorectal Cancer,NO VARIANTS REPORTED

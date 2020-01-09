@@ -3,6 +3,13 @@ import csv
 from random import randint
 from faker import Faker
 
+def read_fusion(row):
+    variant = {}
+    variant['HGNC_Symbol'] = row['HGNC_Symbol']
+    variant['gene'] = row['HGNC_Symbol']
+    variant['Variant'] = row['Variant']
+    variant['pdot'] = 'rearrange'
+
 
 def read_cnv_variant(row):
     variant = {}
@@ -50,12 +57,16 @@ def read_all_variants(patients,path):
         for row in reader:
             order_id = row['OrderID_External']
             patient = patients[order_id]
-            if 'Copy Number' in row['Variant']:
-                cnv = read_cnv_variant(row)
-                patient['unannotated_cnv'].append(cnv)
-            else:
-                snv = read_snv_variant(row)
-                patient['unannotated_snv'].append(snv)
+            if not row['HGNC_Symbol']== 'NO VARIANTS REPORTED':
+                if 'Copy Number' in row['Variant']:
+                    cnv = read_cnv_variant(row)
+                    patient['unannotated_cnv'].append(cnv)
+                elif 'Fusion' in row['Variant']:
+                    fusion = read_fusion(row)
+                    patient['unannotated_fusion'].append(fusion)
+                else:
+                    snv = read_snv_variant(row)
+                    patient['unannotated_snv'].append(snv)
 
 
 def read_immune_results_file(path):
@@ -63,7 +74,7 @@ def read_immune_results_file(path):
     with open(path) as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            patient = {'unannotated_snv':[], 'unannotated_cnv':[], 'io_data':{}}
+            patient = {'unannotated_snv':[], 'unannotated_cnv':[],'unannotated_fusion':[], 'io_data':{}}
             seen_TMB_Interpretation = False
             for key in row:
                 if seen_TMB_Interpretation:
@@ -115,8 +126,14 @@ def add_patient_data(patient):
     patient['test_id'] = test_id
     patient['sign_out_date'] = '12/13/2019 10:39 AM ET'
     patient['provider'] = faker.name_male()
-    diagnosis = disease_dict[patient['OmniDisease']]
-    source = source_dict[patient['OmniDisease']]
+    if patient['OmniDisease'] in disease_dict:
+        diagnosis = disease_dict[patient['OmniDisease']]
+    else:
+        diagnosis = ''
+    if patient['OmniDisease'] in source_dict:
+        source = source_dict[patient['OmniDisease']]
+    else:
+        source = 'biopsy'
     patient['diagnosis'] = diagnosis
     patient['source'] = source
     patient['ckb_disease'] = patient['OmniDisease'].lower()
@@ -175,3 +192,5 @@ def add_io_data(patient):
         variant['pdot'] = 'high'
     elif msi_result == 'Low' or msi_result == 'Stable':
         variant['pdot'] = 'stable'
+    else:
+        variant['report_status'] = 'not_reported'

@@ -19,6 +19,8 @@ def get_gene_from_variant(variant):
 def append_variant(variants, variant):
     gene = variant.split(' ', 1)[0]
     pdot = variant.split(' ', 1)[1]
+    if gene=='KRAS' or gene=='NRAS':
+        pdot = 'mutation'
     found = False
     for v in variants:
         if v['gene']==gene:
@@ -65,6 +67,8 @@ def get_pertinent_negatives_for_report(patient,evidence_collection):
                 variant = variant.replace('mutant', 'mutation')
             if 'act mut' in variant:
                 variant = variant.replace('act mut', 'mutation')
+            if 'inmutation' in variant:
+                variant = variant.replace('inmutation', 'mutation')
             if variant == 'ALK positive':
                 variant = 'ALK fusion'
             if variant == 'ROS1 positive':

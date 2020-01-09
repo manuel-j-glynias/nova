@@ -170,6 +170,7 @@ def get_evidence_from_doc(doc, variant_dict):
     evidence['approval_index'] = doc['approval_index']
     evidence['ampCapAscoEvidenceLevel'] = doc['ampCapAscoEvidenceLevel']
     evidence['ampCapAscoInferredTier'] = doc['ampCapAscoInferredTier']
+    evidence['cap'] = evidence['ampCapAscoInferredTier'] + evidence['ampCapAscoEvidenceLevel']
     evidence['response_type'] = doc['response_type']
     evidence['availability'] = '-'
     evidence['io'] = False

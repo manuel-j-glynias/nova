@@ -142,6 +142,11 @@ def is_cnv_reportable(variant):
         if is_cnv_loss(variant):
             mark_as_inactivating(variant)
 
+def is_fusion_reportable(variant):
+    # all are reportable
+    variant['report_status'] = 'reportable'
+
+
 
 def not_clinvar_pathogenic(variant):
     if is_oncogene(variant):

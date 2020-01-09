@@ -45,6 +45,10 @@ def find_all_reportable_markers(patient):
         v['type'] = 'cnv'
         if v['report_status'] == 'reportable':
             patient['reportable_markers'].append(v)
+    for v in patient['fusion']:
+        v['type'] = 'fusion'
+        if v['report_status'] == 'reportable':
+            patient['reportable_markers'].append(v)
     for v in patient['io']:
         if v['report_status'] == 'reportable':
             patient['reportable_markers'].append(v)
@@ -92,6 +96,7 @@ def append_unique_therapy(therapy_list,therapy):
     if not found:
         therapy_list.append(therapy)
 
+
 def get_therapies_by_marker(indications):
     therapies_by_marker = {}
     convert_approval_index = ['','CDx', 'Contraindicated', 'NCCN','Phase III','Phase II']
@@ -107,12 +112,13 @@ def get_therapies_by_marker(indications):
             therapy['setting'] = 'Contraindicated'
         elif indication['off_label']:
             therapy['setting'] = 'Off Label'
-        therapy['evidence'] = convert_approval_index[indication['approval_index']] + ' (' + indication[
-            'ampCapAscoInferredTier'] + indication['ampCapAscoEvidenceLevel'] + ')'
+        therapy['evidence'] = convert_approval_index[indication['approval_index']] + ' (' + indication['cap'] + ')'
+        therapy['cap'] = indication['cap']
         append_unique_therapy(variant_entry['therapies'],therapy)
     list_of_markers_with_therapies = []
     for key, value in therapies_by_marker.items():
-        list_of_markers_with_therapies.append({'marker':key, 'therapies':value['therapies']})
+        therapies = sorted(value['therapies'], key = lambda t: t['cap'])
+        list_of_markers_with_therapies.append({'marker':key, 'therapies':therapies})
     return list_of_markers_with_therapies
 
 
@@ -143,10 +149,9 @@ def third_page_data(patient):
                 therapy_detail = therapy_details_dict[name]
                 if indication['off_label']:
                     indication['availability'] = 'Off Label'
-                cap = indication['ampCapAscoInferredTier'] + indication['ampCapAscoEvidenceLevel']
-                if cap == 'IA':
+                if indication['cap'] == 'IA':
                     append_unique_therapy(therapy_detail['strong'],indication)
-                elif cap == 'IB':
+                elif indication['cap'] == 'IB':
                     append_unique_therapy(therapy_detail['moderate'],indication)
                 else:
                     append_unique_therapy(therapy_detail['emerging'],indication)
@@ -161,6 +166,7 @@ def third_page_data(patient):
 def handle_one_patient(patient, db, strands):
     patient['snv'] = []
     patient['cnv'] = []
+    patient['fusion'] = []
     patient['io'] = []
     read_variants.add_io_data(patient)
     for variant in patient['unannotated_snv']:
@@ -171,6 +177,11 @@ def handle_one_patient(patient, db, strands):
         annotated_variant = annotate.annotate_cnv(variant, db)
         reportable_variants.is_cnv_reportable(annotated_variant)
         patient['cnv'].append(annotated_variant)
+    for variants in patient['unannotated_fusion']:
+        annotated_variant = annotate.annotate_cnv(variant, db)
+        reportable_variants.is_fusion_reportable(annotated_variant)
+        patient['fusion'].append(annotated_variant)
+
     find_all_reportable_markers(patient)
     evidence.find_therapies(patient, db['evidence'])
     front_page_data(patient, db['evidence'])
@@ -179,7 +190,8 @@ def handle_one_patient(patient, db, strands):
     # pprint.pprint(patient)
 
 def create_one_report(patient):
-    report_generator.render_html_report(patient)
+    # report_generator.render_html_report(patient)
+    report_generator.render_two_page_html_report(patient)
 
 
 
@@ -205,7 +217,7 @@ def main():
     for order_id in patients.keys():
         patient = patients[order_id]
         read_variants.add_patient_data(patient)
-        print(patient['fake_order_id'], '=',order_id)
+        print(patient['fake_order_id'], '=',order_id,'(',patient['OmniDisease'],')')
         handle_one_patient(patient, db, strands)
         create_recommendations(patient,db)
         create_one_report(patient)

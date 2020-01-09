@@ -2,6 +2,7 @@ from jinja2 import Environment, BaseLoader
 from datetime import datetime
 import os
 
+from additional_io import reportable_io_markers
 
 
 def render_all_pages(patient,dir_path):
@@ -28,3 +29,23 @@ def render_html_report(patient):
     dir_path = 'output/' + order_id + '_' + timeStr
     os.mkdir(dir_path)
     render_all_pages(patient,dir_path)
+
+
+def render_two_page_html_report(patient):
+    order_id = patient['fake_order_id']
+    now = datetime.now()
+    timeStr = now.strftime("%m_%d_%Y__%H_%M")
+    path = 'output/' + order_id + '_' + timeStr + '.html'
+    wd = os.getcwd()
+    static = wd + '/static/'
+    with open('templates/pages_1_and_2.html', 'r') as myfile:
+        data = myfile.read()
+        template = Environment(loader=BaseLoader()).from_string(data)
+        # template.globals['STATIC_PREFIX'] = '/Users/mglynias/Desktop/PycharmProjects/nova/static/'
+        template.globals['STATIC_PREFIX'] = static
+        # output.append(template.render(patient=patient))
+        with open(path, "w") as file:
+            file.write(template.render(patient=patient, reportable_io_markers=reportable_io_markers))
+
+
+
