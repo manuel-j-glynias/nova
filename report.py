@@ -97,7 +97,7 @@ def append_unique_therapy(therapy_list,therapy):
         therapy_list.append(therapy)
 
 
-def get_therapies_by_marker(indications):
+def get_therapies_by_marker(indications,ckb_disease):
     therapies_by_marker = {}
     convert_approval_index = ['','CDx', 'Contraindicated', 'NCCN','Phase III','Phase II']
     for indication in indications:
@@ -112,6 +112,8 @@ def get_therapies_by_marker(indications):
             therapy['setting'] = 'Contraindicated'
         elif indication['off_label']:
             therapy['setting'] = 'Off Label'
+        elif indication['disease'] != ckb_disease:
+            therapy['setting'] = indication['disease']
         therapy['evidence'] = convert_approval_index[indication['approval_index']] + ' (' + indication['cap'] + ')'
         therapy['cap'] = indication['cap']
         append_unique_therapy(variant_entry['therapies'],therapy)
@@ -130,7 +132,7 @@ def front_page_data(patient,evidence_collection):
     indications = patient['contraindications']
     indications.extend(patient['indications'])
     indications.extend(patient['off_label'])
-    patient['therapies_by_marker'] = get_therapies_by_marker(indications)
+    patient['therapies_by_marker'] = get_therapies_by_marker(indications,patient['ckb_disease'])
     # if len(patient['therapies_by_marker'])==0:
     #     patient['therapies_by_marker'] = get_therapies_by_marker(patient['off_label'])
 
@@ -214,14 +216,17 @@ def main():
     read_variants.read_all_variants(patients, get_variant_file_path())
     strands = annotate.read_strands('data/strands.xlsx')
     num = 1
-    for order_id in patients.keys():
-        patient = patients[order_id]
-        read_variants.add_patient_data(patient)
-        print(num, patient['fake_order_id'], '=',order_id,':',patient['OmniDisease'])
-        handle_one_patient(patient, db, strands)
-        create_recommendations(patient,db)
-        create_one_report(patient)
-        num += 1
+    with open('output/manifest.txt', "w") as file:
+        for order_id in patients.keys():
+            patient = patients[order_id]
+            read_variants.add_patient_data(patient)
+            out_string = str(num) + ' ' + patient['fake_order_id'] + '=' + order_id + ':' + patient['OmniDisease'] + '\n'
+            print(out_string)
+            file.write(out_string)
+            handle_one_patient(patient, db, strands)
+            create_recommendations(patient,db)
+            create_one_report(patient)
+            num += 1
         # break
         
 

@@ -901,116 +901,116 @@ Priority tumor profiling results include markers associated with therapies with 
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io in reportable_io_markers and io['CD137']|int >= 75 %} class="High" {% endif %} >CD137</div>
-        <div {% if io['CD137']|int >= 75 %} class="High" {% endif %} >{{ io['CD137'] }}</div>
+        <div {% if 'CD137' in reportable_io_markers and io['CD137']|int >= 75 %} class="High" {% endif %} >CD137</div>
+        <div {% if 'CD137' in reportable_io_markers and io['CD137']|int >= 75 %} class="High" {% endif %} >{{ io['CD137'] }}</div>
 
-        <div {% if io['CD27']|int >= 75 %} class="High" {% endif %} >CD27</div>
-        <div {% if io['CD27']|int >= 75 %} class="High" {% endif %} >{{ io['CD27'] }}</div>
+        <div {% if 'CD27' in reportable_io_markers and io['CD27']|int >= 75 %} class="High" {% endif %} >CD27</div>
+        <div {% if 'CD27' in reportable_io_markers and io['CD27']|int >= 75 %} class="High" {% endif %} >{{ io['CD27'] }}</div>
 
-        <div {% if io['CD28']|int >= 75 %} class="High" {% endif %} >CD28</div>
-        <div {% if io['CD28']|int >= 75 %} class="High" {% endif %} >{{ io['CD28'] }}</div>
+        <div {% if 'CD28' in reportable_io_markers and io['CD28']|int >= 75 %} class="High" {% endif %} >CD28</div>
+        <div {% if 'CD28' in reportable_io_markers and io['CD28']|int >= 75 %} class="High" {% endif %} >{{ io['CD28'] }}</div>
 
-        <div {% if io['CD40']|int >= 75 %} class="High" {% endif %} >CD40</div>
-        <div {% if io['CD40']|int >= 75 %} class="High" {% endif %} >{{ io['CD40'] }}</div>
+        <div {% if 'CD40' in reportable_io_markers and io['CD40']|int >= 75 %} class="High" {% endif %} >CD40</div>
+        <div {% if 'CD40' in reportable_io_markers and io['CD40']|int >= 75 %} class="High" {% endif %} >{{ io['CD40'] }}</div>
 
-        <div {% if io['CD40LG']|int >= 75 %} class="High" {% endif %} >CD40LG</div>
-        <div {% if io['CD40LG']|int >= 75 %} class="High" {% endif %} >{{ io['CD40LG'] }}</div>
+        <div {% if 'CD40LG' in reportable_io_markers and io['CD40LG']|int >= 75 %} class="High" {% endif %} >CD40LG</div>
+        <div {% if 'CD40LG' in reportable_io_markers and io['CD40LG']|int >= 75 %} class="High" {% endif %} >{{ io['CD40LG'] }}</div>
 
-        <div {% if io['CD80']|int >= 75 %} class="High" {% endif %} >CD80</div>
-        <div {% if io['CD80']|int >= 75 %} class="High" {% endif %} >{{ io['CD80'] }}</div>
+        <div {% if 'CD80' in reportable_io_markers and io['CD80']|int >= 75 %} class="High" {% endif %} >CD80</div>
+        <div {% if 'CD80' in reportable_io_markers and io['CD80']|int >= 75 %} class="High" {% endif %} >{{ io['CD80'] }}</div>
 
-        <div {% if io['CD86']|int >= 75 %} class="High" {% endif %} >CD86</div>
-        <div {% if io['CD86']|int >= 75 %} class="High" {% endif %} >{{ io['CD86'] }}</div>
+        <div {% if 'CD86' in reportable_io_markers and io['CD86']|int >= 75 %} class="High" {% endif %} >CD86</div>
+        <div {% if 'CD86' in reportable_io_markers and io['CD86']|int >= 75 %} class="High" {% endif %} >{{ io['CD86'] }}</div>
 
-        <div {% if io['GITR']|int >= 75 %} class="High" {% endif %} >GITR</div>
-        <div {% if io['GITR']|int >= 75 %} class="High" {% endif %} >{{ io['GITR'] }}</div>
+        <div {% if 'GITR' in reportable_io_markers and io['GITR']|int >= 75 %} class="High" {% endif %} >GITR</div>
+        <div {% if 'GITR' in reportable_io_markers and io['GITR']|int >= 75 %} class="High" {% endif %} >{{ io['GITR'] }}</div>
 
-        <div {% if io['GZMB']|int >= 75 %} class="High" {% endif %} >GZMB</div>
-        <div {% if io['GZMB']|int >= 75 %} class="High" {% endif %} >{{ io['GZMB'] }}</div>
+        <div {% if 'GZMB' in reportable_io_markers and io['GZMB']|int >= 75 %} class="High" {% endif %} >GZMB</div>
+        <div {% if 'GZMB' in reportable_io_markers and io['GZMB']|int >= 75 %} class="High" {% endif %} >{{ io['GZMB'] }}</div>
 
-        <div {% if io['ICOS']|int >= 75 %} class="High" {% endif %} >ICOS</div>
-        <div {% if io['ICOS']|int >= 75 %} class="High" {% endif %} >{{ io['ICOS'] }}</div>
+        <div {% if 'ICOS' in reportable_io_markers and io['ICOS']|int >= 75 %} class="High" {% endif %} >ICOS</div>
+        <div {% if 'ICOS' in reportable_io_markers and io['ICOS']|int >= 75 %} class="High" {% endif %} >{{ io['ICOS'] }}</div>
 
-        <div {% if io['ICOSLG']|int >= 75 %} class="High" {% endif %} >ICOSLG</div>
-        <div {% if io['ICOSLG']|int >= 75 %} class="High" {% endif %} >{{ io['ICOSLG'] }}</div>
+        <div {% if 'ICOSLG' in reportable_io_markers and io['ICOSLG']|int >= 75 %} class="High" {% endif %} >ICOSLG</div>
+        <div {% if 'ICOSLG' in reportable_io_markers and io['ICOSLG']|int >= 75 %} class="High" {% endif %} >{{ io['ICOSLG'] }}</div>
 
-        <div {% if io['IFNG']|int >= 75 %} class="High" {% endif %} >IFNG</div>
-        <div {% if io['IFNG']|int >= 75 %} class="High" {% endif %} >{{ io['IFNG'] }}</div>
+        <div {% if 'IFNG' in reportable_io_markers and io['IFNG']|int >= 75 %} class="High" {% endif %} >IFNG</div>
+        <div {% if 'IFNG' in reportable_io_markers and io['IFNG']|int >= 75 %} class="High" {% endif %} >{{ io['IFNG'] }}</div>
 
-        <div {% if io['OX40']|int >= 75 %} class="High" {% endif %} >OX40</div>
-        <div {% if io['OX40']|int >= 75 %} class="High" {% endif %} >{{ io['OX40'] }}</div>
+        <div {% if 'OX40' in reportable_io_markers and io['OX40']|int >= 75 %} class="High" {% endif %} >OX40</div>
+        <div {% if 'OX40' in reportable_io_markers and io['OX40']|int >= 75 %} class="High" {% endif %} >{{ io['OX40'] }}</div>
 
-        <div {% if io['OX-40L']|int >= 75 %} class="High" {% endif %} >OX-40L</div>
-        <div {% if io['OX-40L']|int >= 75 %} class="High" {% endif %} >{{ io['OX-40L'] }}</div>
+        <div {% if 'OX-40L' in reportable_io_markers and io['OX-40L']|int >= 75 %} class="High" {% endif %} >OX-40L</div>
+        <div {% if 'OX-40L' in reportable_io_markers and io['OX-40L']|int >= 75 %} class="High" {% endif %} >{{ io['OX-40L'] }}</div>
 
-        <div {% if io['TBX21']|int >= 75 %} class="High" {% endif %} >TBX21</div>
-        <div {% if io['TBX21']|int >= 75 %} class="High" {% endif %} >{{ io['TBX21'] }}</div>
+        <div {% if 'TBX21' in reportable_io_markers and io['TBX21']|int >= 75 %} class="High" {% endif %} >TBX21</div>
+        <div {% if 'TBX21' in reportable_io_markers and io['TBX21']|int >= 75 %} class="High" {% endif %} >{{ io['TBX21'] }}</div>
 
    </div>
     <div class="Nested_Immuno_Oncology">
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['CXCL10']|int >= 75 %} class="High" {% endif %} >CXCL10</div>
-        <div {% if io['CXCL10']|int >= 75 %} class="High" {% endif %} >{{ io['CXCL10'] }}</div>
+        <div {% if 'CXCL10' in reportable_io_markers and io['CXCL10']|int >= 75 %} class="High" {% endif %} >CXCL10</div>
+        <div {% if 'CXCL10' in reportable_io_markers and io['CXCL10']|int >= 75 %} class="High" {% endif %} >{{ io['CXCL10'] }}</div>
 
-        <div {% if io['CXCR6']|int >= 75 %} class="High" {% endif %} >CXCR6</div>
-        <div {% if io['CXCR6']|int >= 75 %} class="High" {% endif %} >{{ io['CXCR6'] }}</div>
+        <div {% if 'CXCR6' in reportable_io_markers and io['CXCR6']|int >= 75 %} class="High" {% endif %} >CXCR6</div>
+        <div {% if 'CXCR6' in reportable_io_markers and io['CXCR6']|int >= 75 %} class="High" {% endif %} >{{ io['CXCR6'] }}</div>
 
-        <div {% if io['DDX58']|int >= 75 %} class="High" {% endif %} >DDX58</div>
-        <div {% if io['DDX58']|int >= 75 %} class="High" {% endif %} >{{ io['DDX58'] }}</div>
+        <div {% if 'DDX58' in reportable_io_markers and io['DDX58']|int >= 75 %} class="High" {% endif %} >DDX58</div>
+        <div {% if 'DDX58' in reportable_io_markers and io['DDX58']|int >= 75 %} class="High" {% endif %} >{{ io['DDX58'] }}</div>
 
-        <div {% if io['GATA3']|int >= 75 %} class="High" {% endif %} >GATA3</div>
-        <div {% if io['GATA3']|int >= 75 %} class="High" {% endif %} >{{ io['GATA3'] }}</div>
+        <div {% if 'GATA3' in reportable_io_markers and io['GATA3']|int >= 75 %} class="High" {% endif %} >GATA3</div>
+        <div {% if 'GATA3' in reportable_io_markers and io['GATA3']|int >= 75 %} class="High" {% endif %} >{{ io['GATA3'] }}</div>
 
-        <div {% if io['IL10']|int >= 75 %} class="High" {% endif %} >IL10</div>
-        <div {% if io['IL10']|int >= 75 %} class="High" {% endif %} >{{ io['IL10'] }}</div>
+        <div {% if 'IL10' in reportable_io_markers and io['IL10']|int >= 75 %} class="High" {% endif %} >IL10</div>
+        <div {% if 'IL10' in reportable_io_markers and io['IL10']|int >= 75 %} class="High" {% endif %} >{{ io['IL10'] }}</div>
 
-        <div {% if io['IL1B']|int >= 75 %} class="High" {% endif %} >IL1B</div>
-        <div {% if io['IL1B']|int >= 75 %} class="High" {% endif %} >{{ io['IL1B'] }}</div>
+        <div {% if 'IL1B' in reportable_io_markers and io['IL1B']|int >= 75 %} class="High" {% endif %} >IL1B</div>
+        <div {% if 'IL1B' in reportable_io_markers and io['IL1B']|int >= 75 %} class="High" {% endif %} >{{ io['IL1B'] }}</div>
 
-        <div {% if io['MX1']|int >= 75 %} class="High" {% endif %} >MX1</div>
-        <div {% if io['MX1']|int >= 75 %} class="High" {% endif %} >{{ io['MX1'] }}</div>
+        <div {% if 'MX1' in reportable_io_markers and io['MX1']|int >= 75 %} class="High" {% endif %} >MX1</div>
+        <div {% if 'MX1' in reportable_io_markers and io['MX1']|int >= 75 %} class="High" {% endif %} >{{ io['MX1'] }}</div>
 
-        <div {% if io['STAT1']|int >= 75 %} class="High" {% endif %} >STAT1</div>
-        <div {% if io['STAT1']|int >= 75 %} class="High" {% endif %} >{{ io['STAT1'] }}</div>
+        <div {% if 'STAT1' in reportable_io_markers and io['STAT1']|int >= 75 %} class="High" {% endif %} >STAT1</div>
+        <div {% if 'STAT1' in reportable_io_markers and io['STAT1']|int >= 75 %} class="High" {% endif %} >{{ io['STAT1'] }}</div>
 
-        <div {% if io['TGFB1']|int >= 75 %} class="High" {% endif %} >TGFB1</div>
-        <div {% if io['TGFB1']|int >= 75 %} class="High" {% endif %} >{{ io['TGFB1'] }}</div>
+        <div {% if 'TGFB1' in reportable_io_markers and io['TGFB1']|int >= 75 %} class="High" {% endif %} >TGFB1</div>
+        <div {% if 'TGFB1' in reportable_io_markers and io['TGFB1']|int >= 75 %} class="High" {% endif %} >{{ io['TGFB1'] }}</div>
 
-        <div {% if io['TNF']|int >= 75 %} class="High" {% endif %} >TNF</div>
-        <div {% if io['TNF']|int >= 75 %} class="High" {% endif %} >{{ io['TNF'] }}</div>
+        <div {% if 'TNF' in reportable_io_markers and io['TNF']|int >= 75 %} class="High" {% endif %} >TNF</div>
+        <div {% if 'TNF' in reportable_io_markers and io['TNF']|int >= 75 %} class="High" {% endif %} >{{ io['TNF'] }}</div>
     </div>
 
     <div class="Nested_Immuno_Oncology">
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['CD2']|int >= 75 %} class="High" {% endif %} >CD2</div>
-        <div {% if io['CD2']|int >= 75 %} class="High" {% endif %} >{{ io['CD2'] }}</div>
+        <div {% if 'CD2' in reportable_io_markers and io['CD2']|int >= 75 %} class="High" {% endif %} >CD2</div>
+        <div {% if 'CD2' in reportable_io_markers and io['CD2']|int >= 75 %} class="High" {% endif %} >{{ io['CD2'] }}</div>
 
-        <div {% if io['CD20']|int >= 75 %} class="High" {% endif %} >CD20</div>
-        <div {% if io['CD20']|int >= 75 %} class="High" {% endif %} >{{ io['CD20'] }}</div>
+        <div {% if 'CD20' in reportable_io_markers and io['CD20']|int >= 75 %} class="High" {% endif %} >CD20</div>
+        <div {% if 'CD20' in reportable_io_markers and io['CD20']|int >= 75 %} class="High" {% endif %} >{{ io['CD20'] }}</div>
 
-        <div {% if io['CD3']|int >= 75 %} class="High" {% endif %} >CD3</div>
-        <div {% if io['CD3']|int >= 75 %} class="High" {% endif %} >{{ io['CD3'] }}</div>
+        <div {% if 'CD3' in reportable_io_markers and io['CD3']|int >= 75 %} class="High" {% endif %} >CD3</div>
+        <div {% if 'CD3' in reportable_io_markers and io['CD3']|int >= 75 %} class="High" {% endif %} >{{ io['CD3'] }}</div>
 
-        <div {% if io['CD4']|int >= 75 %} class="High" {% endif %} >CD4</div>
-        <div {% if io['CD4']|int >= 75 %} class="High" {% endif %} >{{ io['CD4'] }}</div>
+        <div {% if 'CD4' in reportable_io_markers and io['CD4']|int >= 75 %} class="High" {% endif %} >CD4</div>
+        <div {% if 'CD4' in reportable_io_markers and io['CD4']|int >= 75 %} class="High" {% endif %} >{{ io['CD4'] }}</div>
 {# CD8 is special #}
-        <div {% if io['CD8']|int >= 75 %} class="High"
-                {% elif io['CD8']|int < 25 %} class="Low" {% endif %} >CD8</div>
-        <div {% if io['CD8']|int >= 75 %} class="High"
-                {% elif io['CD8']|int < 25 %} class="Low" {% endif %} >{{ io['CD8'] }}</div>
+        <div {% if 'CD8' in reportable_io_markers and io['CD8']|int >= 75 %} class="High"
+                {% elif 'CD8' in reportable_io_markers and io['CD8']|int < 25 %} class="Low" {% endif %} >CD8</div>
+        <div {% if 'CD8' in reportable_io_markers and io['CD8']|int >= 75 %} class="High"
+                {% elif 'CD8' in reportable_io_markers and io['CD8']|int < 25 %} class="Low" {% endif %} >{{ io['CD8'] }}</div>
 
-        <div {% if io['FOXP3']|int >= 75 %} class="High" {% endif %} >FOXP3</div>
-        <div {% if io['FOXP3']|int >= 75 %} class="High" {% endif %} >{{ io['FOXP3'] }}</div>
+        <div {% if 'FOXP3' in reportable_io_markers and io['FOXP3']|int >= 75 %} class="High" {% endif %} >FOXP3</div>
+        <div {% if 'FOXP3' in reportable_io_markers and io['FOXP3']|int >= 75 %} class="High" {% endif %} >{{ io['FOXP3'] }}</div>
 
-        <div {% if io['KLRD1']|int >= 75 %} class="High" {% endif %} >KLRD1</div>
-        <div {% if io['KLRD1']|int >= 75 %} class="High" {% endif %} >{{ io['KLRD1'] }}</div>
+        <div {% if 'KLRD1' in reportable_io_markers and io['KLRD1']|int >= 75 %} class="High" {% endif %} >KLRD1</div>
+        <div {% if 'KLRD1' in reportable_io_markers and io['KLRD1']|int >= 75 %} class="High" {% endif %} >{{ io['KLRD1'] }}</div>
 
-        <div {% if io['SLAMF4']|int >= 75 %} class="High" {% endif %} >SLAMF4</div>
-        <div {% if io['SLAMF4']|int >= 75 %} class="High" {% endif %} >{{ io['SLAMF4'] }}</div>
+        <div {% if 'SLAMF4' in reportable_io_markers and io['SLAMF4']|int >= 75 %} class="High" {% endif %} >SLAMF4</div>
+        <div {% if 'SLAMF4' in reportable_io_markers and io['SLAMF4']|int >= 75 %} class="High" {% endif %} >{{ io['SLAMF4'] }}</div>
     </div>
 
 
@@ -1018,32 +1018,32 @@ Priority tumor profiling results include markers associated with therapies with 
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['BTLA']|int >= 75 %} class="High" {% endif %} >BTLA</div>
-        <div {% if io['BTLA']|int >= 75 %} class="High" {% endif %} >{{ io['BTLA'] }}</div>
+        <div {% if 'BTLA' in reportable_io_markers and io['BTLA']|int >= 75 %} class="High" {% endif %} >BTLA</div>
+        <div {% if 'BTLA' in reportable_io_markers and io['BTLA']|int >= 75 %} class="High" {% endif %} >{{ io['BTLA'] }}</div>
 
-        <div {% if io['CTLA4']|int >= 75 %} class="High" {% endif %} >CTLA4</div>
-        <div {% if io['CTLA4']|int >= 75 %} class="High" {% endif %} >{{ io['CTLA4'] }}</div>
+        <div {% if 'CTLA4' in reportable_io_markers and io['CTLA4']|int >= 75 %} class="High" {% endif %} >CTLA4</div>
+        <div {% if 'CTLA4' in reportable_io_markers and io['CTLA4']|int >= 75 %} class="High" {% endif %} >{{ io['CTLA4'] }}</div>
 
-        <div {% if io['LAG3']|int >= 75 %} class="High" {% endif %} >LAG3</div>
-        <div {% if io['LAG3']|int >= 75 %} class="High" {% endif %} >{{ io['LAG3'] }}</div>
+        <div {% if 'LAG3' in reportable_io_markers and io['LAG3']|int >= 75 %} class="High" {% endif %} >LAG3</div>
+        <div {% if 'LAG3' in reportable_io_markers and io['LAG3']|int >= 75 %} class="High" {% endif %} >{{ io['LAG3'] }}</div>
 
-        <div {% if io['PD-1']|int >= 75 %} class="High" {% endif %} >PD-1</div>
-        <div {% if io['PD-1']|int >= 75 %} class="High" {% endif %} >{{ io['PD-1'] }}</div>
+        <div {% if 'PD-1' in reportable_io_markers and io['PD-1']|int >= 75 %} class="High" {% endif %} >PD-1</div>
+        <div {% if 'PD-1' in reportable_io_markers and io['PD-1']|int >= 75 %} class="High" {% endif %} >{{ io['PD-1'] }}</div>
 
-        <div {% if io['PD-L1']|int >= 75 %} class="High" {% endif %} >PD-L1</div>
-        <div {% if io['PD-L1']|int >= 75 %} class="High" {% endif %} >{{ io['PD-L1'] }}</div>
+        <div {% if 'PD-L1' in reportable_io_markers and io['PD-L1']|int >= 75 %} class="High" {% endif %} >PD-L1</div>
+        <div {% if 'PD-L1' in reportable_io_markers and io['PD-L1']|int >= 75 %} class="High" {% endif %} >{{ io['PD-L1'] }}</div>
 
-        <div {% if io['PD-L2']|int >= 75 %} class="High" {% endif %} >PD-L2</div>
-        <div {% if io['PD-L2']|int >= 75 %} class="High" {% endif %} >{{ io['PD-L2'] }}</div>
+        <div {% if 'PD-L2' in reportable_io_markers and io['PD-L2']|int >= 75 %} class="High" {% endif %} >PD-L2</div>
+        <div {% if 'PD-L2' in reportable_io_markers and io['PD-L2']|int >= 75 %} class="High" {% endif %} >{{ io['PD-L2'] }}</div>
 
-        <div {% if io['TIM3']|int >= 75 %} class="High" {% endif %} >TIM3</div>
-        <div {% if io['TIM3']|int >= 75 %} class="High" {% endif %} >{{ io['TIM3'] }}</div>
+        <div {% if 'TIM3' in reportable_io_markers and io['TIM3']|int >= 75 %} class="High" {% endif %} >TIM3</div>
+        <div {% if 'TIM3' in reportable_io_markers and io['TIM3']|int >= 75 %} class="High" {% endif %} >{{ io['TIM3'] }}</div>
 
-        <div {% if io['VISTA']|int >= 75 %} class="High" {% endif %} >VISTA</div>
-        <div {% if io['VISTA']|int >= 75 %} class="High" {% endif %} >{{ io['VISTA'] }}</div>
+        <div {% if 'VISTA' in reportable_io_markers and io['VISTA']|int >= 75 %} class="High" {% endif %} >VISTA</div>
+        <div {% if 'VISTA' in reportable_io_markers and io['VISTA']|int >= 75 %} class="High" {% endif %} >{{ io['VISTA'] }}</div>
 
-        <div {% if io['TNFRSF14']|int >= 75 %} class="High" {% endif %} >TNFRSF14</div>
-        <div {% if io['TNFRSF14']|int >= 75 %} class="High" {% endif %} >{{ io['TNFRSF14'] }}</div>
+        <div {% if 'TNFRSF14' in reportable_io_markers and io['TNFRSF14']|int >= 75 %} class="High" {% endif %} >TNFRSF14</div>
+        <div {% if 'TNFRSF14' in reportable_io_markers and io['TNFRSF14']|int >= 75 %} class="High" {% endif %} >{{ io['TNFRSF14'] }}</div>
     </div>
 
 
@@ -1051,32 +1051,32 @@ Priority tumor profiling results include markers associated with therapies with 
         <div>Marker</div>
         <div>Rank</div>
 
-        <div {% if io['ADORA2A']|int >= 75 %} class="High" {% endif %} >ADORA2A</div>
-        <div {% if io['ADORA2A']|int >= 75 %} class="High" {% endif %} >{{ io['ADORA2A'] }}</div>
+        <div {% if 'ADORA2A' in reportable_io_markers and io['ADORA2A']|int >= 75 %} class="High" {% endif %} >ADORA2A</div>
+        <div {% if 'ADORA2A' in reportable_io_markers and io['ADORA2A']|int >= 75 %} class="High" {% endif %} >{{ io['ADORA2A'] }}</div>
 
-        <div {% if io['CCL2']|int >= 75 %} class="High" {% endif %} >CCL2</div>
-        <div {% if io['CCL2']|int >= 75 %} class="High" {% endif %} >{{ io['CCL2'] }}</div>
+        <div {% if 'CCL2' in reportable_io_markers and io['CCL2']|int >= 75 %} class="High" {% endif %} >CCL2</div>
+        <div {% if 'CCL2' in reportable_io_markers and io['CCL2']|int >= 75 %} class="High" {% endif %} >{{ io['CCL2'] }}</div>
 
-        <div {% if io['CCR2']|int >= 75 %} class="High" {% endif %} >CCR2</div>
-        <div {% if io['CCR2']|int >= 75 %} class="High" {% endif %} >{{ io['CCR2'] }}</div>
+        <div {% if 'CCR2' in reportable_io_markers and io['CCR2']|int >= 75 %} class="High" {% endif %} >CCR2</div>
+        <div {% if 'CCR2' in reportable_io_markers and io['CCR2']|int >= 75 %} class="High" {% endif %} >{{ io['CCR2'] }}</div>
 
-        <div {% if io['CD163']|int >= 75 %} class="High" {% endif %} >CD163</div>
-        <div {% if io['CD163']|int >= 75 %} class="High" {% endif %} >{{ io['CD163'] }}</div>
+        <div {% if 'CD163' in reportable_io_markers and io['CD163']|int >= 75 %} class="High" {% endif %} >CD163</div>
+        <div {% if 'CD163' in reportable_io_markers and io['CD163']|int >= 75 %} class="High" {% endif %} >{{ io['CD163'] }}</div>
 
-        <div {% if io['CD38']|int >= 75 %} class="High" {% endif %} >CD38</div>
-        <div {% if io['CD38']|int >= 75 %} class="High" {% endif %} >{{ io['CD38'] }}</div>
+        <div {% if 'CD38' in reportable_io_markers and io['CD38']|int >= 75 %} class="High" {% endif %} >CD38</div>
+        <div {% if 'CD38' in reportable_io_markers and io['CD38']|int >= 75 %} class="High" {% endif %} >{{ io['CD38'] }}</div>
 
-        <div {% if io['CD39']|int >= 75 %} class="High" {% endif %} >CD39</div>
-        <div {% if io['CD39']|int >= 75 %} class="High" {% endif %} >{{ io['CD39'] }}</div>
+        <div {% if 'CD39' in reportable_io_markers and io['CD39']|int >= 75 %} class="High" {% endif %} >CD39</div>
+        <div {% if 'CD39' in reportable_io_markers and io['CD39']|int >= 75 %} class="High" {% endif %} >{{ io['CD39'] }}</div>
 
-        <div {% if io['CD68']|int >= 75 %} class="High" {% endif %} >CD68</div>
-        <div {% if io['CD68']|int >= 75 %} class="High" {% endif %} >{{ io['CD68'] }}</div>
+        <div {% if 'CD68' in reportable_io_markers and io['CD68']|int >= 75 %} class="High" {% endif %} >CD68</div>
+        <div {% if 'CD68' in reportable_io_markers and io['CD68']|int >= 75 %} class="High" {% endif %} >{{ io['CD68'] }}</div>
 
-        <div {% if io['CSF1R']|int >= 75 %} class="High" {% endif %} >CSF1R</div>
-        <div {% if io['CSF1R']|int >= 75 %} class="High" {% endif %} >{{ io['CSF1R'] }}</div>
+        <div {% if 'CSF1R' in reportable_io_markers and io['CSF1R']|int >= 75 %} class="High" {% endif %} >CSF1R</div>
+        <div {% if 'CSF1R' in reportable_io_markers and io['CSF1R']|int >= 75 %} class="High" {% endif %} >{{ io['CSF1R'] }}</div>
 
-        <div {% if io['IDO1']|int >= 75 %} class="High" {% endif %} >IDO1</div>
-        <div {% if io['IDO1']|int >= 75 %} class="High" {% endif %} >{{ io['IDO1'] }}</div>
+        <div {% if 'IDO1' in reportable_io_markers and io['IDO1']|int >= 75 %} class="High" {% endif %} >IDO1</div>
+        <div {% if 'IDO1' in reportable_io_markers and io['IDO1']|int >= 75 %} class="High" {% endif %} >{{ io['IDO1'] }}</div>
    </div>
 </div>
 

@@ -117,14 +117,15 @@ def maybe_append_evidence(indications, evidence):
         indications.append(evidence)
 
 
-def get_evdience_for_disease_and_markers(patient,evidence_collection,approval_index):
+def get_evdience_for_disease_and_markers(patient,evidence_collection,approval_index,disease):
     variants,variant_dict  = get_variants_for_evidence_query(patient)
 
-    myquery = {'approval_index': {'$lte': approval_index}, 'diseases': patient['ckb_disease'],
+    myquery = {'approval_index': {'$lte': approval_index}, 'diseases': disease,
                'variants': {'$in' : variants} }
     mydocs = evidence_collection.find(myquery).sort("approval_index", 1)
     for doc in mydocs:
         evidence = get_evidence_from_doc(doc, variant_dict)
+        evidence['disease'] = disease
         evidence['off_label'] = False
         if doc['contraindicated']:
             evidence['contraindicated'] = True
@@ -187,6 +188,19 @@ def get_evidence_from_doc(doc, variant_dict):
 
 
 # approval_index:5 = Phase II
+def get_evdience_for_breast_cancer(patient, evidence_collection):
+    diseases = ['Her2-receptor positive breast cancer',
+                'Her2-receptor negative breast cancer',
+                'triple-receptor negative breast cancer',
+                'estrogen-receptor positive breast cancer',
+                'progesterone-receptor positive breast cancer']
+
+    get_evdience_for_disease_and_markers(patient, evidence_collection, 5, patient['ckb_disease'])
+    for d in diseases:
+        get_evdience_for_disease_and_markers(patient, evidence_collection, 5, d)
+
+
+
 def find_therapies(patient, evidence_collection):
     wt = get_wild_types_for_disease(patient, evidence_collection)
     add_WT_to_patient(patient, wt)
@@ -194,7 +208,11 @@ def find_therapies(patient, evidence_collection):
     patient['contraindications'] = []
     patient['cdx_io'] = []
 
-    get_evdience_for_disease_and_markers(patient, evidence_collection,5)
+
+    if patient['OmniDisease']=='Breast Cancer':
+        get_evdience_for_breast_cancer(patient,evidence_collection)
+    else:
+        get_evdience_for_disease_and_markers(patient, evidence_collection,5,patient['ckb_disease'])
 
     get_evdience_for_markers(patient, evidence_collection, 5)
     # print()
