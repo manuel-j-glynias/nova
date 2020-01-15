@@ -198,3 +198,15 @@ def add_io_data(patient):
         variant['pdot'] = 'stable'
     else:
         variant['report_status'] = 'not_reported'
+
+
+def read_summary_interprations(patients,path):
+    summary_dict = {}
+    with open(path) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            summary_dict[row['Order_ID']] = row['GeneratedMolecularSummary']
+    for order_id in patients.keys():
+        patient = patients[order_id]
+        patient['GeneratedMolecularSummary'] = summary_dict[order_id]
+

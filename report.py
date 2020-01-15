@@ -214,6 +214,7 @@ def main():
     db = utils.get_database(client,'omni')
     patients = read_variants.read_immune_results_file(get_immune_results_file_path())
     read_variants.read_all_variants(patients, get_variant_file_path())
+    read_variants.read_summary_interprations(patients,'input/SummaryInterpretationsTable_OA_2020_01_14.csv')
     strands = annotate.read_strands('data/strands.xlsx')
     num = 1
     with open('output/manifest.txt', "w") as file:
@@ -224,7 +225,7 @@ def main():
             print(out_string)
             file.write(out_string)
             handle_one_patient(patient, db, strands)
-            create_recommendations(patient,db)
+            # create_recommendations(patient,db)
             create_one_report(patient)
             num += 1
         # break
