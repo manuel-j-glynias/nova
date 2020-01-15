@@ -1,3 +1,7 @@
 # Project exclude paths
 /venv/
 /output/
+*.pyc
+output.zip
+.idea/nova.iml
+.idea/misc.xml
