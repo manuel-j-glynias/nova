@@ -267,15 +267,32 @@ def main():
         for order_id in patients.keys():
             patient = patients[order_id]
             read_variants.add_patient_data(patient, fake_id_dict,disease_icd_dict,omni_to_jax_disease_dict,disease_path_to_reportable_disease_dict)
-            out_string = str(num) + ' ' + patient['fake_order_id'] + '=' + order_id + ':' + patient['OmniDisease'] + '\n'
-            print(out_string)
-            file.write(out_string)
+
             handle_one_patient(patient, db, strands,variant_groups_dict)
             # create_recommendations(patient,db)
             create_one_report(patient)
+            out_string = generate_manifest_string(num, order_id, patient)
+            print(out_string)
+            file.write(out_string)
             num += 1
         # break
-        
+
+
+def generate_manifest_string(num, order_id, patient):
+    out_string = str(num) + ' ' + patient['fake_order_id'] + '=' + order_id + ':' + patient['OmniDisease'] + '\n'
+    variants = patient['snv']
+    variants.extend(patient['cnv'])
+    variants.extend(patient['fusion'])
+    variants.extend(patient['io'])
+    variants_string = ''
+    for v in variants:
+        if 'pdot' in v:
+            if len(variants_string)>0:
+                variants_string += ','
+            variants_string += variant_name(v)
+    out_string += '\tVariants:' + variants_string+ '\n' + '\n'
+
+    return out_string
 
 
 if __name__ == "__main__":
