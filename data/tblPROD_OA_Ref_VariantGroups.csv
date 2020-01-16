@@ -1,0 +1,120 @@
+ReportDiseaseName,VariantGroup,VariantName,VariantNameSource,Version,VersionDate
+All Solid Tumor,NTRK fusion,NTRK1 fusion,JAX,101,1/14/2020
+All Solid Tumor,NTRK fusion,NTRK2 fusion,JAX,101,1/14/2020
+All Solid Tumor,NTRK fusion,NTRK3 fusion,JAX,101,1/14/2020
+Anaplastic Thyroid Carcinoma,BRAF V600E,BRAF V600E,JAX,101,1/14/2020
+Breast Cancer,BRCA1/2 mutation,BRCA1 inact mut,JAX,101,1/14/2020
+Breast Cancer,BRCA1/2 mutation,BRCA1 mutant,JAX,101,1/14/2020
+Breast Cancer,BRCA1/2 mutation,BRCA2 inact mut,JAX,101,1/14/2020
+Breast Cancer,BRCA1/2 mutation,BRCA2 mutant,JAX,101,1/14/2020
+Breast Cancer,HER2 (ERBB2) amplification,ERBB2 amp,JAX,101,1/14/2020
+Breast Cancer,HER2 (ERBB2) amplification,ERBB2 over exp,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA act mut,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA C420R,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA E542K,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA E545A,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA E545D,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA E545G,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA E545K,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA H1047L,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA H1047R,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA H1047Y,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA Q546E,JAX,101,1/14/2020
+Breast Cancer,PIK3CA activating mutation,PIK3CA Q546R,JAX,101,1/14/2020
+Colorectal Cancer,BRAF V600E,BRAF V600E,JAX,101,1/14/2020
+Colorectal Cancer,HER2 (ERBB2) mutation,ERBB2 amp,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS A146X,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS A59X,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS exon 2,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS exon 3,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS exon 4,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS G12X,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS G13X,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS K117X,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS mutant,JAX,101,1/14/2020
+Colorectal Cancer,KRAS mutation,KRAS Q61X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS A146X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS A59X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS exon 2,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS exon 3,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS exon 4,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS G12X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS G13X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS G1X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS K117X,JAX,101,1/14/2020
+Colorectal Cancer,NRAS mutation,NRAS Q61X,JAX,101,1/14/2020
+Endometrial Cancer,HER2 (ERBB2) mutation,ERBB2 amp,JAX,101,1/14/2020
+Esophageal Cancer,HER2 (ERBB2) amplification,ERBB2 amp,JAX,101,1/14/2020
+Esophageal Cancer,HER2 (ERBB2) amplification,ERBB2 over exp,JAX,101,1/14/2020
+Esophageal Squamous Cell Carcinoma,HER2 (ERBB2) amplification,ERBB2 amp,JAX,101,1/14/2020
+Esophageal Squamous Cell Carcinoma,HER2 (ERBB2) amplification,ERBB2 over exp,JAX,101,1/14/2020
+Gastric Adenocarcinoma,HER2 (ERBB2) amplification,ERBB2 amp,JAX,101,1/14/2020
+Gastric Adenocarcinoma,HER2 (ERBB2) amplification,ERBB2 over exp,JAX,101,1/14/2020
+Gastric Cancer,HER2 (ERBB2) amplification,ERBB2 amp,JAX,101,1/14/2020
+Gastric Cancer,HER2 (ERBB2) amplification,ERBB2 over exp,JAX,101,1/14/2020
+Gastroesophageal Junction Adenocarcinoma,HER2 (ERBB2) amplification,ERBB2 amp,JAX,101,1/14/2020
+Gastroesophageal Junction Adenocarcinoma,HER2 (ERBB2) amplification,ERBB2 over exp,JAX,101,1/14/2020
+Gastrointestinal Stromal Tumor,KIT exon 9/11,KIT exon 11,JAX,101,1/14/2020
+Gastrointestinal Stromal Tumor,KIT exon 9/11,KIT exon 9,JAX,101,1/14/2020
+Gastrointestinal Stromal Tumor,NF1 mutation,NF1 mutant,JAX,101,1/14/2020
+Gastrointestinal Stromal Tumor,PDGFRA mutation,PDGFRA D842V,JAX,101,1/14/2020
+Gastrointestinal Stromal Tumor,PDGFRA mutation,PDGFRA exon18,JAX,101,1/14/2020
+Gastrointestinal Stromal Tumor,PDGFRA mutation,PDGFRA mutant,JAX,101,1/14/2020
+Medullary Thyroid Cancer,RET mutant,RET mutant,JAX,101,1/14/2020
+Melanoma,BRAF V600,BRAF V600E,JAX,101,1/14/2020
+Melanoma,BRAF V600,BRAF V600E/K,JAX,101,1/14/2020
+Melanoma,BRAF V600,BRAF V600K,JAX,101,1/14/2020
+Melanoma,BRAF V600,BRAF V600X,JAX,101,1/14/2020
+Melanoma,KIT activating mutation,KIT act mut,JAX,101,1/14/2020
+Melanoma,KIT activating mutation,KIT exon 11,JAX,101,1/14/2020
+Melanoma,KIT activating mutation,KIT exon 13,JAX,101,1/14/2020
+Melanoma,NRAS mutation,NRAS mutant,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,ALK fusion,ALK fusion,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,ALK fusion,ALK rearrange,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,BRAF V600,BRAF V600,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,BRAF V600,BRAF V600E,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,BRAF V600,BRAF V600E/K,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,BRAF V600,BRAF V600K,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,BRAF V600,BRAF V600X,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR exon 19 deletion,EGFR exon 19 del,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR exon 20 insertion,EGFR exon 20 ins,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR act mut,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR exon 19 ins,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR G719X,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR L858R,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR L861Q,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR mutant,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR S768I,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,EGFR mutation,EGFR T790M,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,HER2 (ERBB2) mutation,ERBB2 mutant,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,KRAS mutation,KRAS G12C,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,KRAS mutation,KRAS mutant,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,MET amp/exon 14,MET amp,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,MET amp/exon 14,MET exon 14,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,RET fusion,RET fusion,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,RET fusion,RET rearrange,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,ROS1 fusion,ROS1 fusion,JAX,101,1/14/2020
+Non-Small Cell Lung Cancer,ROS1 fusion,ROS1 rearrange,JAX,101,1/14/2020
+Ovarian Cancer,BRCA1/2 mutation,BRCA1 inact mut,JAX,101,1/14/2020
+Ovarian Cancer,BRCA1/2 mutation,BRCA1 mutant,JAX,101,1/14/2020
+Ovarian Cancer,BRCA1/2 mutation,BRCA2 inact mut,JAX,101,1/14/2020
+Ovarian Cancer,BRCA1/2 mutation,BRCA2 mutant,JAX,101,1/14/2020
+Pancreatic Adenocarcinoma,BRCA1/2 mutation,BRCA1 mutant,JAX,101,1/14/2020
+Pancreatic Adenocarcinoma,BRCA1/2 mutation,BRCA2 mutant,JAX,101,1/14/2020
+Prostate Cancer,ATM mutation,ATM mutant,JAX,101,1/14/2020
+Prostate Cancer,BRCA1/2 mutation,BRCA1 mutant,JAX,101,1/14/2020
+Prostate Cancer,BRCA1/2 mutation,BRCA2 mutant,JAX,101,1/14/2020
+Salivary Gland Cancer,AR amplification,AR amp,JAX,101,1/14/2020
+Salivary Gland Cancer,HER2 (ERBB2) mutation,ERBB2 amp,JAX,101,1/14/2020
+Sarcoma,ALK fusion,ALK fusion,JAX,101,1/14/2020
+Thyroid Cancer,BRAF mutation,BRAF act mut,JAX,101,1/14/2020
+Thyroid Cancer,BRAF mutation,BRAF inact mut,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR fusion,FGFR2-BICC1,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR fusion,FGFR2-CASP7,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR fusion,FGFR3-BAIAP2L1,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR fusion,FGFR3-TACC3,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR3 activating mutation,FGFR3 act mut,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR3 mutation,FGFR3 G370C,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR3 mutation,FGFR3 R248C,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR3 mutation,FGFR3 S249C,JAX,101,1/14/2020
+Urothelial Carcinoma,FGFR3 mutation,FGFR3 Y373C,JAX,101,1/14/2020

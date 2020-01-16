@@ -1,11 +1,20 @@
 
 # genes:{$in: ['KRAS','NRAS']}
 # {variants: {'$regex' :'wild-type$'},approval_index: {'$lte': 3}, diseases:'colorectal cancer' }
+# {approval_index :1, diseases: {$in: ['stomach cancer', 'hepatocellular carcinoma']} }
 import pprint
 
 
+def get_diseases_query_terms(diseases):
+    terms = []
+    for d in diseases:
+         # terms.append("'" + d + "'")
+         terms.append(d)
+    return terms
+
+
 def get_wild_types_for_disease(patient,evidence_collection):
-    myquery = {'approval_index': {'$lte': 3}, 'diseases': patient['ckb_disease'], 'variants': {'$regex' :'wild-type$'}}
+    myquery = {'approval_index': {'$lte': 3}, 'diseases': {'$in': get_diseases_query_terms(patient['ckb_diseases'])}, 'variants': {'$regex' :'wild-type$'}}
     mydocs = evidence_collection.find(myquery)
     variants = []
     for doc in mydocs:
@@ -86,7 +95,7 @@ def get_variants_for_evidence_query(patient):
                     variant = v['gene'] + ' mutant'
                     variants.append(variant)
                     variant_dict[variant] = v
-
+    patient['ckb_variants'] = variants
     return variants, variant_dict
 
 
@@ -117,15 +126,15 @@ def maybe_append_evidence(indications, evidence):
         indications.append(evidence)
 
 
-def get_evdience_for_disease_and_markers(patient,evidence_collection,approval_index,disease):
+def get_evdience_for_disease_and_markers(patient,evidence_collection,approval_index,diseases):
     variants,variant_dict  = get_variants_for_evidence_query(patient)
 
-    myquery = {'approval_index': {'$lte': approval_index}, 'diseases': disease,
+    myquery = {'approval_index': {'$lte': approval_index}, 'diseases': {'$in': get_diseases_query_terms(diseases)},
                'variants': {'$in' : variants} }
     mydocs = evidence_collection.find(myquery).sort("approval_index", 1)
     for doc in mydocs:
         evidence = get_evidence_from_doc(doc, variant_dict)
-        evidence['disease'] = disease
+        evidence['disease'] = evidence['indication']
         evidence['off_label'] = False
         if doc['contraindicated']:
             evidence['contraindicated'] = True
@@ -144,19 +153,19 @@ def therapy_not_on_label(therapy, indications):
     return b
 
 
-def get_evdience_for_markers(patient,evidence_collection,approval_index):
-    patient['off_label'] = []
-    variants,variant_dict  = get_variants_for_evidence_query(patient)
-
-    myquery = {'approval_index': {'$lte': approval_index},
-               'variants': {'$in' : variants} }
-    mydocs = evidence_collection.find(myquery).sort("approval_index", 1)
-    for doc in mydocs:
-        evidence = get_evidence_from_doc(doc, variant_dict)
-    if therapy_not_on_label(evidence['therapy'],patient['indications']):
-        evidence['off_label'] = True
-        evidence['contraindicated'] = False
-        patient['off_label'].append(evidence)
+# def get_evdience_for_markers(patient,evidence_collection,approval_index):
+#     patient['off_label'] = []
+#     variants,variant_dict  = get_variants_for_evidence_query(patient)
+#
+#     myquery = {'approval_index': {'$lte': approval_index},
+#                'variants': {'$in' : variants} }
+#     mydocs = evidence_collection.find(myquery).sort("approval_index", 1)
+#     for doc in mydocs:
+#         evidence = get_evidence_from_doc(doc, variant_dict)
+#     if therapy_not_on_label(evidence['therapy'],patient['indications']):
+#         evidence['off_label'] = True
+#         evidence['contraindicated'] = False
+#         patient['off_label'].append(evidence)
 
 
 def get_evidence_from_doc(doc, variant_dict):
@@ -195,9 +204,8 @@ def get_evdience_for_breast_cancer(patient, evidence_collection):
                 'estrogen-receptor positive breast cancer',
                 'progesterone-receptor positive breast cancer']
 
-    get_evdience_for_disease_and_markers(patient, evidence_collection, 5, patient['ckb_disease'])
-    for d in diseases:
-        get_evdience_for_disease_and_markers(patient, evidence_collection, 5, d)
+    get_evdience_for_disease_and_markers(patient, evidence_collection, 5, patient['ckb_diseases'])
+    get_evdience_for_disease_and_markers(patient, evidence_collection, 5, diseases)
 
 
 
@@ -212,25 +220,6 @@ def find_therapies(patient, evidence_collection):
     if patient['OmniDisease']=='Breast Cancer':
         get_evdience_for_breast_cancer(patient,evidence_collection)
     else:
-        get_evdience_for_disease_and_markers(patient, evidence_collection,5,patient['ckb_disease'])
+        get_evdience_for_disease_and_markers(patient, evidence_collection,5,patient['ckb_diseases'])
 
-    get_evdience_for_markers(patient, evidence_collection, 5)
-    # print()
-    # print(patient['ckb_disease'])
-    # for v in patient['reportable_markers']:
-    #     print(v['gene'] + ' ' + v['pdot'])
-    #
-    # for indication in patient['indications']:
-    #     print(indication['therapy'],indication['ampCapAscoEvidenceLevel'],indication['ampCapAscoInferredTier'],
-    #           indication['variants'])
-    # print('off_label')
-    # for indication in patient['off_label']:
-    #     print(indication['therapy'],indication['ampCapAscoEvidenceLevel'],indication['ampCapAscoInferredTier'],
-    #           indication['indication'],indication['variants'])
-
-
-
-# def add_pathologists_comments(patient):
-#     pathologist_comments = 'This 44-year old woman with lung non-small cell carcinoma has one genomic variant (EGFR ' \
-#                            'L858R) and one positive immunotherapy marker (PD-L1) with companion diagnostic indications. Osimertinib, a third-generation EGFR inhibitor, is an approved frontline targeted therapy for this patient. Patients with EGFR mutations may also respond to single agent anti-PD-1 therapy following progression on EGFR therapy. The high tumor mutational burden in this patient may indicate response to combination ipilimumab + nivolumab or single agent nivolumab immunotherapy. This patient does have a mutation in STK11, and emerging evidence indicates they are less likely to respond to anti-PD-1 therapy. There are two additional genomic variants detected with therapeutic options in clinical trials (TP53 E62X, BRCA2 K585R), as well as highly expressed immuno-oncology markers with targets in clinical trials.'
-#     patient['pathologist_comments'] = pathologist_comments
+    # get_evdience_for_markers(patient, evidence_collection, 5)   no off-label
