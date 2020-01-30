@@ -1,3 +1,5 @@
+import csv
+import KMS
 
 lorem = {'description':'Auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat in', 'pmid': '8276250'}
 
@@ -64,7 +66,6 @@ def get_io_recommendation(key):
         value = io_recommendations[key]
     return value
 
-reportable_io_markers = ['CD8','TIM3','CCR2','GITR','VISTA','CSF1R','TNF','CD38','IDO1','TGFB1','CTLA4','LAG3','CD40','ADORA2A','OX40','CD137','CD27','ICOS']
 
 io_markers = ['CD137','CD27','CD28','CD40','CD40LG','CD80','CD86','GITR','GZMB','ICOS','ICOSLG','IFNG','OX40','OX-40L','TBX21',
              'CXCL10','CXCR6','DDX58','GATA3','IL10','IL1B','MX1','STAT1','TGFB1','TNF',
@@ -73,25 +74,64 @@ io_markers = ['CD137','CD27','CD28','CD40','CD40LG','CD80','CD86','GITR','GZMB',
               'ADORA2A','CCL2','CCR2','CD163','CD38','CD39','CD68','CSF1R','IDO1'
 ]
 
-def make_fake_trial(io):
-    fake_trail = {'therapy':'XXX-12345', 'availability':'Locally Available Clinical Trials: NCT123456789 (Phase II, Roswell Park Comprehensive Cancer Center'}
+def make_trial(io,trial):
+    s = ''
+    for drug in trial['drugs']:
+        if len(s) > 0:
+            s += ' + '
+        s += drug
+    availability = 'Available Trial(s): ' + trial['nct_id'] + ' (' + trial['phase']
+    for loc in trial['locations']:
+        availability += ', ' + loc['facility_name']
+    availability += ')'
+
+    fake_trail = {'therapy':s, 'availability':availability}
     fake_trail['efficacy'] = get_io_recommendation(io)
     return fake_trail
 
 
-def add_additional_io(patient):
+def get_trial_io(patient,io,drug):
+    zip = '14203'
+    clincal_trial_distance = 150
+
+    trials = KMS.match_go_local_trials_by_drug(drug,zip,clincal_trial_distance,patient['DOB'])
+    return trials
+
+
+
+def add_additional_io(patient,io_drug_dict):
     patient['additional_io_details'] = []
     for io in io_markers:
         if io in reportable_io_markers and not patient['io_data'][io]=='-':
-            if int(patient['io_data'][io]) >= IO_cut_off:
-                detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'High', 'description':get_io_description(io),
-                          'trials': [make_fake_trial(io)]}
-                patient['additional_io_details'].append(detail)
-            elif io=='CD8' and int(patient['io_data']['CD8']) <= 25:
-                detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'Low', 'description':get_io_description(io),
-                          'trials': [make_fake_trial(io)]}
-                patient['additional_io_details'].append(detail)
+            if int(patient['io_data'][io]) >= IO_cut_off or (io=='CD8' and int(patient['io_data']['CD8']) <= 25):
+                if io in io_drug_dict:
+                    drug_list = io_drug_dict[io]
+                    for d in drug_list:
+                        trials = get_trial_io(patient,io,d)
+                        if len(trials)>0:
+                            trial_list =[]
+                            for trial in trials:
+                                trial_list.append(make_trial(io,trial))
+                            detail = {'marker':io, 'rank': patient['io_data'][io], 'interpretation':'High', 'description':get_io_description(io),
+                                      'trials': trial_list}
+                            patient['additional_io_details'].append(detail)
 
 
 
+def get_io_drug_dict():
+    file_path = 'data/tblPROD_OA_OA_MarkerReporting.csv'
+    io_drug_list = []
+    with open(file_path, newline='') as io_drugs:
+        io_reader = csv.DictReader(io_drugs)
+        for io_drug in io_reader:
+            if len(io_drug['Therapies']) > 0:
+                io_drug['drug_list'] = io_drug['Therapies'].split(";")
+
+            io_drug_list.append(dict(io_drug))
+
+    io_drug_dict = {}
+    for io_drug in io_drug_list:
+        if 'drug_list' in io_drug:
+            io_drug_dict[io_drug['Marker']] = io_drug['drug_list']
+    return io_drug_dict
 

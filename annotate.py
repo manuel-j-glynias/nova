@@ -1,5 +1,4 @@
 import json
-import time
 import requests
 import re
 import liftover
@@ -48,8 +47,6 @@ def add_ckb_variant_info(variant, db):
     pdot = variant['pdot']
     full_name = gene + ' ' + pdot
     mycol = db["variant_info"]
-    myquery = {'full_name': full_name}
-    mydoc = mycol.find_one(myquery)
     variant['ckb_id'] = ''
     variant['variant_description'] = ''
     variant['protein_effect'] = ''
@@ -61,27 +58,93 @@ def add_ckb_variant_info(variant, db):
     variant['gene_id'] = ''
     variant['is_gain_of_function'] = False
     variant['is_loss_of_function'] = False
+
+    myquery = {'full_name': full_name}
+    mydoc = mycol.find_one(myquery)
+
     if mydoc is not None:
-        if 'ckb_id' in mydoc:
-            variant['ckb_id'] = mydoc['ckb_id']
-        if 'description' in mydoc:
-            variant['variant_description'] = mydoc['description']
-        if 'protein_effect' in mydoc:
-            variant['protein_effect'] = mydoc['protein_effect']
-            variant['is_gain_of_function'] = 'gain of function' in variant['protein_effect']
-            variant['is_loss_of_function'] = 'loss of function' in variant['protein_effect']
-        if 'variant_type' in mydoc:
-            variant['variant_type'] = mydoc['variant_type']
-        if 'gDot' in mydoc:
-            variant['gDot'] = mydoc['gDot']
-        if 'cDot' in mydoc:
-            variant['cDot'] = mydoc['cDot']
-        if 'cdot_pos' in mydoc:
-            variant['cdot_pos'] = mydoc['cdot_pos']
-        if 'pdot_pos' in mydoc:
-            variant['pdot_pos'] = mydoc['pdot_pos']
-        if 'gene_id' in mydoc:
-            variant['gene_id'] = mydoc['gene_id']
+        variant_info_from_ckb(mydoc, variant)
+    else:
+        if variant['gene_category']=='Tumor Suppressor Gene' and (variant['is_truncating_variants'] or variant[
+            'predicted_deleterious']):
+            myquery = {'full_name': gene + ' inact mut'}
+            mydoc = mycol.find_one(myquery)
+            if mydoc is not None:
+                variant_info_from_ckb(mydoc, variant)
+        if mydoc is None:
+            myquery = {'full_name': gene + ' mutant'}
+            mydoc = mycol.find_one(myquery)
+            if mydoc is not None:
+                variant_info_from_ckb(mydoc, variant)
+
+def variant_info_from_ckb(mydoc, variant):
+    if 'ckb_id' in mydoc:
+        variant['ckb_id'] = mydoc['ckb_id']
+    if 'description' in mydoc:
+        variant['variant_description'] = mydoc['description']
+    if 'protein_effect' in mydoc:
+        variant['protein_effect'] = mydoc['protein_effect']
+        variant['is_gain_of_function'] = 'gain of function' in variant['protein_effect']
+        variant['is_loss_of_function'] = 'loss of function' in variant['protein_effect']
+    if 'variant_type' in mydoc:
+        variant['variant_type'] = mydoc['variant_type']
+    if 'gDot' in mydoc:
+        variant['gDot'] = mydoc['gDot']
+    if 'cDot' in mydoc:
+        variant['cDot'] = mydoc['cDot']
+    if 'cdot_pos' in mydoc:
+        variant['cdot_pos'] = mydoc['cdot_pos']
+    if 'pdot_pos' in mydoc:
+        variant['pdot_pos'] = mydoc['pdot_pos']
+    if 'gene_id' in mydoc:
+        variant['gene_id'] = mydoc['gene_id']
+
+
+def add_ckb_cnv_variant_info(variant, db):
+    gene = variant['gene']
+    pdot = variant['pdot']
+    full_name = gene + ' ' + pdot
+    mycol = db["variant_info"]
+    myquery = {'full_name': full_name}
+    mydoc = mycol.find_one(myquery)
+    variant['ckb_id'] = ''
+    variant['variant_description'] = ''
+    variant['protein_effect'] = ''
+    variant['variant_type'] = ''
+    variant['gDot'] = ''
+    variant['cDot'] = ''
+    variant['cdot_pos'] = ''
+    variant['pdot_pos'] = ''
+    variant['gene_id'] = ''
+    variant['is_gain_of_function'] = False
+    variant['is_loss_of_function'] = False
+    if mydoc is not None:
+        get_ckb_info_for_cnv(mydoc, variant)
+    else:
+        if pdot == 'loss':
+            full_name = gene + ' del'
+            myquery = {'full_name': full_name}
+            mydoc = mycol.find_one(myquery)
+            if mydoc is not None:
+                get_ckb_info_for_cnv(mydoc, variant)
+            else:
+                full_name = gene + ' inact mut'
+                myquery = {'full_name': full_name}
+                mydoc = mycol.find_one(myquery)
+                if mydoc is not None:
+                    get_ckb_info_for_cnv(mydoc, variant)
+
+def get_ckb_info_for_cnv(mydoc, variant):
+    if 'ckb_id' in mydoc:
+        variant['ckb_id'] = mydoc['ckb_id']
+    if 'description' in mydoc:
+        variant['variant_description'] = mydoc['description']
+    if 'protein_effect' in mydoc:
+        variant['protein_effect'] = mydoc['protein_effect']
+        variant['is_gain_of_function'] = 'gain of function' in variant['protein_effect']
+        variant['is_loss_of_function'] = 'loss of function' in variant['protein_effect']
+    if 'gene_id' in mydoc:
+        variant['gene_id'] = mydoc['gene_id']
 
 
 def get_num_cv_nonbenign_between(gene, begin, end, db):
@@ -194,65 +257,72 @@ def annotate_one(variant,db):
 
     server = "https://rest.ensembl.org/vep/human/region/"
     ext = str(variant['chrom']) + ':' + str(variant['pos_hg38']) + '/' + variant['alt_hg38'] + '?appris=1&'
-    # print(server + ext)
-    r = requests.get(server + ext, headers={"Content-Type": "application/json"})
-    # if variant['chrom']=='17':
-    #     print('17')
-    if not r.ok:
-        #         r.raise_for_status()
-        print(r.text)
+    variant['is_truncating_variants'] = False
+    variant['predicted_deleterious'] = False
+
+    try:
+        r = requests.get(server + ext, headers={"Content-Type": "application/json"})
+        if not r.ok:
+            #         r.raise_for_status()
+            print(r.text)
+            response_dict['status'] = 'server error'
+        else:
+            decoded = r.json()
+            best_appris = 'R9'
+            if 'transcript_consequences' in decoded[0]:
+                for consequence in decoded[0]['transcript_consequences']:
+                    if 'protein_start' in consequence and 'appris' in consequence and consequence['appris'].startswith( \
+                            'P'):
+                        if is_better(consequence['appris'], best_appris):
+                            best_appris = consequence['appris']
+                            variant['gene'] = consequence['gene_symbol']
+                            add_ckb_gene_info(variant, db)
+                            # add_uniprot_info(variant)
+                            mutation_type = consequence['consequence_terms'][0]
+                            if 'cds_start' in consequence:
+                                allele_string = str(decoded[0]['allele_string'])
+                                if '-' in allele_string:
+                                    allele_string = 'del'
+                                else:
+                                    allele_string = allele_string.replace('/', '>')
+                                variant['cdot'] = str(consequence['cds_start']) + allele_string
+                            if 'protein_start' in consequence:
+                                protein_start = consequence['protein_start']
+                                variant['protein_start'] = protein_start
+                                # add_region_hit(variant)
+                                # add_hot_spot_info(variant)
+
+                                if 'amino_acids' in consequence:
+                                    amino_acids = consequence['amino_acids']
+                                    aa = amino_acids.split('/')
+                                    variant['pdot'] = aa[0] + str(protein_start) + aa[1]
+                                else:
+                                    variant['pdot'] = str(protein_start) + 'del'
+                                # add_ckb_variant_info(variant, db)
+                                variant['full_name'] = variant['gene'] + ' ' + variant['pdot']
+                            else:
+                                print('crap')
+                            variant['mutation_type'] = mutation_type
+                            variant['is_protein_altering'] = mutation_type in protein_altering_variants
+                            variant['is_truncating_variants'] = mutation_type in truncating_variants
+                            if 'polyphen_prediction' in consequence:
+                                variant['polyphen_prediction'] = consequence['polyphen_prediction']
+                            if 'sift_prediction' in consequence:
+                                variant['sift_prediction'] = consequence['sift_prediction']
+                            variant['predicted_deleterious'] = False
+                            if 'polyphen_prediction' in variant and 'sift_prediction' in variant:
+                                if 'damaging' in variant['polyphen_prediction'] and 'deleterious' in variant[
+                                    'sift_prediction']:
+                                    variant['predicted_deleterious'] = True
+                            add_ckb_variant_info(variant, db)
+
+                            response_dict['status'] = 'success'
+                            response_dict['variant'] = variant
+
+    except requests.exceptions.RequestException as e:
         response_dict['status'] = 'server error'
-    else:
-        decoded = r.json()
-        best_appris = 'R9'
-        if 'transcript_consequences' in decoded[0]:
-            for consequence in decoded[0]['transcript_consequences']:
-                if 'protein_start' in consequence and 'appris' in consequence and consequence['appris'].startswith(\
-                        'P'):
-                    if is_better(consequence['appris'], best_appris):
-                        best_appris = consequence['appris']
-                        variant['gene'] = consequence['gene_symbol']
-                        add_ckb_gene_info(variant,db)
-                        # add_uniprot_info(variant)
-                        mutation_type = consequence['consequence_terms'][0]
-                        if 'cds_start' in consequence:
-                            allele_string = str(decoded[0]['allele_string'])
-                            if '-' in allele_string:
-                                allele_string = 'del'
-                            else:
-                                allele_string = allele_string.replace('/','>')
-                            variant['cdot'] = str(consequence['cds_start']) + allele_string
-                        if 'protein_start' in consequence:
-                            protein_start = consequence['protein_start']
-                            variant['protein_start'] = protein_start
-                            # add_region_hit(variant)
-                            # add_hot_spot_info(variant)
+        print(e)
 
-                            if 'amino_acids' in consequence:
-                                amino_acids = consequence['amino_acids']
-                                aa = amino_acids.split('/')
-                                variant['pdot'] = aa[0] + str(protein_start) + aa[1]
-                            else:
-                                variant['pdot'] = str(protein_start) + 'del'
-                            add_ckb_variant_info(variant,db)
-                            variant['full_name'] = variant['gene'] + ' ' + variant['pdot']
-                        else:
-                            print('crap')
-                        variant['mutation_type'] = mutation_type
-                        variant['is_protein_altering'] = mutation_type in protein_altering_variants
-                        variant['is_truncating_variants'] = mutation_type in truncating_variants
-                        if 'polyphen_prediction' in consequence:
-                            variant['polyphen_prediction'] = consequence['polyphen_prediction']
-                        if 'sift_prediction' in consequence:
-                            variant['sift_prediction'] = consequence['sift_prediction']
-                        variant['predicted_deleterious'] = False
-                        if 'polyphen_prediction' in variant and 'sift_prediction' in variant:
-                            if 'damaging' in variant['polyphen_prediction'] and 'deleterious' in variant[
-                                'sift_prediction']:
-                                variant['predicted_deleterious'] = True
-
-                        response_dict['status'] = 'success'
-                        response_dict['variant'] = variant
     return response_dict
 
 def annotate_one_by_pick(variant,db):
@@ -271,6 +341,8 @@ def annotate_one_by_pick(variant,db):
     r = requests.get(server + ext, headers={"Content-Type": "application/json"})
     # if variant['chrom']=='17':
     #     print('17')
+    variant['is_truncating_variants'] = False
+    variant['predicted_deleterious'] = False
     if not r.ok:
         #         r.raise_for_status()
         print(r.text)
@@ -420,4 +492,5 @@ def annotate_snv(strands,variant,db):
 
 def annotate_cnv(variant,db):
     add_ckb_gene_info(variant, db)
+    add_ckb_cnv_variant_info(variant,db)
     return variant

@@ -45,7 +45,7 @@ def render_two_page_html_report(patient):
     path = get_dir_path(patient) + '/' + order_id + '_' + timeStr + '.html'
     # wd = os.getcwd()
     # static = wd + '/static/'
-    with open('templates/pages_1_and_2.html', 'r') as myfile:
+    with open('templates/pages.html', 'r') as myfile:
         data = myfile.read()
         template = Environment(loader=BaseLoader()).from_string(data)
         with open(path, "w") as file:

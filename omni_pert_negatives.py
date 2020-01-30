@@ -1,3 +1,4 @@
+from evidence import get_variants_for_evidence_query
 
 
 def get_pertinent_negatives_for_report(patient,variant_groups_dict):
@@ -14,7 +15,8 @@ def get_pertinent_negatives_for_report(patient,variant_groups_dict):
         v2g_dict[entry['variant_name']]= entry['variant_group']
         if not vg in negatives:
             negatives.append(vg)
-
+    if 'ckb_variants' not in patient:
+        get_variants_for_evidence_query(patient)
     for variant in patient['ckb_variants']:
         if variant in v2g_dict:
             vg = v2g_dict[variant]

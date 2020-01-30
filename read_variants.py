@@ -149,16 +149,29 @@ def add_patient_data(patient, fake_id_dict,disease_icd_dict,omni_to_jax_disease_
 
 
 def add_jax_disease(patient,omni_to_jax_disease_dict):
+    patient['ckb_diseases'] = []
+    patient['ckb_disease_ids'] = []
     if patient['DiseasePath'] in omni_to_jax_disease_dict:
-        patient['ckb_diseases'] =[]
-        patient['ckb_disease_ids'] = []
         entry = omni_to_jax_disease_dict[patient['DiseasePath']]
-        for d in entry:
+        add_ckb_diseases(entry, patient)
+    else:
+        if patient['OmniDisease'] in omni_to_jax_disease_dict:
+            entry = omni_to_jax_disease_dict[patient['OmniDisease']]
+            add_ckb_diseases(entry, patient)
+        else:
+            patient['ckb_diseases'].append('Advanced Solid Tumor')
+            patient['ckb_disease_ids'].append('10000003')
+
+        # patient['ckb_diseases'] = [patient['OmniDisease'].lower()]
+        # patient['ckb_disease_ids'] = None
+
+
+def add_ckb_diseases(entry, patient):
+    for d in entry:
+        if d['jax_disease_name'] not in patient['ckb_diseases']:
             patient['ckb_diseases'].append(d['jax_disease_name'])
             patient['ckb_disease_ids'].append(d['jax_disease_id'])
-    else:
-        patient['ckb_diseases'] = [patient['OmniDisease'].lower()]
-        patient['ckb_disease_ids'] = None
+
 
 def get_ICD(disease_icd_dict, patient):
     if patient['OrderID_External'] in disease_icd_dict:
@@ -281,11 +294,15 @@ def read_omni_to_jax_disease_dict():
                              'jax_disease_id': row['ResourceDiseaseID'],
                              'jax_disease_name': row['ResourceDiseaseName'],
                              'omni_disease': row['OmniDisease'], 'm_code': row['MCode']}
-            if row['DiseasePath'] in omni_to_jax_disease_dict:
-                entry = omni_to_jax_disease_dict[row['DiseasePath']]
+            if disease_entry['disease_path']=='' and disease_entry['omni_disease'] != '':
+                disease_entry['disease_path'] = row['OmniDisease']
+                # print(disease_entry['disease_path'])
+
+            if disease_entry['disease_path'] in omni_to_jax_disease_dict:
+                entry = omni_to_jax_disease_dict[disease_entry['disease_path']]
             else:
                 entry = []
-                omni_to_jax_disease_dict[row['DiseasePath']] = entry
+                omni_to_jax_disease_dict[disease_entry['disease_path']] = entry
             entry.append(disease_entry)
     return omni_to_jax_disease_dict
 
